@@ -397,5 +397,26 @@
     "title": "Series",
     "section": "",
     "text": "This series contains…."
+  },
+  {
+    "objectID": "authors/novica/index.html",
+    "href": "authors/novica/index.html",
+    "title": "Novica Nakov",
+    "section": "",
+    "text": "👋Hey,\nI currently work with data and people at the 🐟 Norwegian 🐄 Veterinary 🥘 Institute.\n\n💻I write and contribute to R packages;\n©️ I like to talk about free software;\n✍️ I am a co-author at the Discindo blog which mostly covers topics about R and Shiny in the cloud;\n📚 I write books, most recently for children;\n👨‍🎓 I like to learn new things;\n🦎 I used to contribute a lot to l10n of free software projects, Mozilla in particular. My name is on the Mozilla monument;\n📄 I keep my CV in plain text on this GitHub repository, or as HTML on GitHub Pages;\n🍕and, the name Novica rhymes with pizza."
+  },
+  {
+    "objectID": "projects/newscatcheR/index.html",
+    "href": "projects/newscatcheR/index.html",
+    "title": "newscatcheR",
+    "section": "",
+    "text": "Programmatically collect normalized news from (almost) any website using R.\nnewscatcheR is an R clone of the python package newscatcher.\nThe package provides a dataset of news sites and their rss feeds, together with some characteristics of the websites such as the topic, country or language of the website, and few functions explore and access the feeds from R."
+  },
+  {
+    "objectID": "projects/r2lambda/index.html",
+    "href": "projects/r2lambda/index.html",
+    "title": "r2lambda",
+    "section": "",
+    "text": "The goal of {r2lambda} is to make it easier to go from an R script to a deployed AWS Lambda function. It does this by wrapping preexisting functionality from the {paws} and {lambdr} packages."
   }
 ]

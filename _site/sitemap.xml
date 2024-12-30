@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://discindo.org/projects.html</loc>
-    <lastmod>2024-12-30T17:44:28.704Z</lastmod>
+    <lastmod>2024-12-30T19:34:41.405Z</lastmod>
   </url>
   <url>
     <loc>https://discindo.org/posts/r2lambda/2023-02-24-an-r-aws-lambda-function-to-download-tidytuesday-datasets/index.html</loc>
@@ -50,14 +50,30 @@
   </url>
   <url>
     <loc>https://discindo.org/about.html</loc>
-    <lastmod>2024-12-30T19:02:08.945Z</lastmod>
+    <lastmod>2024-12-30T19:33:03.948Z</lastmod>
   </url>
   <url>
     <loc>https://discindo.org/novica/index.html</loc>
-    <lastmod>2024-12-30T19:13:12.710Z</lastmod>
+    <lastmod>2024-12-30T19:16:19.514Z</lastmod>
   </url>
   <url>
     <loc>https://discindo.org/teo/index.html</loc>
     <lastmod>2024-12-30T19:02:28.828Z</lastmod>
+  </url>
+  <url>
+    <loc>https://discindo.org/authors/novica/index.html</loc>
+    <lastmod>2024-12-30T19:16:19.514Z</lastmod>
+  </url>
+  <url>
+    <loc>https://discindo.org/authors/teo/index.html</loc>
+    <lastmod>2024-12-30T19:02:28.828Z</lastmod>
+  </url>
+  <url>
+    <loc>https://discindo.org/projects/newscatcheR/index.html</loc>
+    <lastmod>2024-12-30T19:36:15.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://discindo.org/projects/r2lambda/index.html</loc>
+    <lastmod>2024-12-30T19:36:04.910Z</lastmod>
   </url>
 </urlset>
