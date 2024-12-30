@@ -1,0 +1,13 @@
+---
+  title: "Series: r2lambda"
+listing:
+  contents: posts/r2lambda
+sort: "date desc"
+type: default
+categories: false
+sort-ui: false
+filter-ui: false
+fields: [date, title, reading-time, description]
+page-layout: full
+title-block-banner: true
+---

@@ -1,0 +1,10 @@
+---
+title: "Series"
+page-layout: full
+
+---
+
+## Here goes 
+
+##### [r2lambda-series](r2lambda-series.html)
+This series contains....

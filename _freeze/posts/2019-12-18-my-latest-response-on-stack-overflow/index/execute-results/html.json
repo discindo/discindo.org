@@ -1,0 +1,17 @@
+{
+  "hash": "6a0e7d19c6caf1f96df495a4ec621316",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Basic visual manupulation of phylogenies in R\nauthors: ['teo']\ndate: '2019-12-18'\nslug: basic-visual-manipulation-of-phylogenies-in-r\ncategories:\n  - R\n  - StackOverflow\ntags: [phylogenies]\n---\n\n\n\n\nFrom time to time I visit Stack Overflow (SO) to look at discussions on `R`, `Shiny`, and `Tidyverse` problems. Being an evolutionary biologist, this lead me to learn `R` in the first place, I also check for any questions related phylogenetics. Today I answered a question on basic visual manipulation of trees using `ape` (analysis of phylogenetics and evolution), the main phylogenetic package in `R`. I reproduce my answer here mainly to go through the process of posting and work out any blogdown issues that might come up. The SO thread is [here](https://stackoverflow.com/questions/59383667/phylogenetic-tree-ape-too-small/59401999#59401999), and my response follows.\n\n-----\n\nHere are some pointers using the `ape` package. I am using a random tree as we don't have access to yours, but these examples should be easily adaptable to your problem. If your provide a reproducible example of a specific question, I could take another look.\n\nFirst me make a random tree, add some species names, and plot it to show the numbers of nodes (both terminal and internal)\n  \n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ape)\nset.seed(123)\nTree <- rtree(10)\nTree$tip.label <- paste(\"Species\", 1:10, sep=\"_\")\nplot.phylo(Tree)\nnodelabels() # blue\ntiplabels() # yellow\nedgelabels() # green\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n\nThen, to color any node or edge of the tree, we can create a vector of colors and provide it to the appropriate `*labels()` function.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# using numbers for colors\nnode_colors <- rep(5:6, each=5)[1:9] # 9 internal nodes \nedge_colors <- rep(3:4, each=9) # 18 branches\ntip_colors <- rep(c(11,12,13), 4)\n# plot:\nplot.phylo(Tree, edge.color = edge_colors, tip.color = tip_colors) \nnodelabels(pch = 21, bg = node_colors, cex=2)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n\n\nTo label just one node and the clade descending from it, we could do:\n  \n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nnode_colors <- rep(NA, 9)\nnode_colors[7] <- \"green\"\nnode_shape <- ifelse(is.na(node_colors), NA, 21)\nedge_colors <- rep(\"black\", 18)\nedge_colors[13:18] <- \"green\"\nplot(Tree, edge.color = edge_colors, edge.width = 2, label.offset = .1)\nnodelabels(pch=node_shape, bg=node_colors, cex=2)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n\n\n\nWithout your tree, it is harder to tell how to adjust the branches. One way is to reduce the size of the tip labels, so they take up less space. Another way might be to play around when saving the png or pdf.  \n\n\nThere are other ways of doing these embellishments of trees, including the `ggtree` package.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  title: "Discindo"
+  site-url: https://discindo.org
+  description: "Data science and data engineering solutions with R and Shiny in the cloud."
+  navbar:
+    right:
+      - projects.qmd
+      - series.qmd
+      - about.qmd
+      - icon: house
+        href: https://discindodata.com
+      - icon: github
+        href: https://github.com/discindo
+      - icon: cup
+        href: https://ko-fi.com/discindo
+      - icon: rss
+        href: index.xml
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+execute:
+  freeze: auto
+
+
