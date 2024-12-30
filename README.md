@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/769b892b-cda2-494a-a17f-d2b0b91aab5f/deploy-status)](https://app.netlify.com/sites/discindo/deploys)
