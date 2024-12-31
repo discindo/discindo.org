@@ -6,13 +6,13 @@ about:
   links: 
     - icon: github
       text: Github
-      link: https://github.com/teofiln
+      href: https://github.com/teofiln
     - icon: puzzle
       text: Research
-      link: https://scholar.google.com/citations?user=2lKX40AAAAAJ&hl=en
+      href: https://scholar.google.com/citations?user=2lKX40AAAAAJ&hl=en
     - icon: linkedin
       text: LinkedIn
-      link: https://www.linkedin.com/in/teofil-nakov-ph-d-874a04202/  
+      href: https://www.linkedin.com/in/teofil-nakov-ph-d-874a04202/  
 ---
 
 ### Hello,
