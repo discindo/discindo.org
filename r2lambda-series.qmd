@@ -4,6 +4,7 @@ listing:
   contents: posts/r2lambda
 sort: "date desc"
 type: default
+date-format: iso
 categories: false
 sort-ui: false
 filter-ui: false
