@@ -1,16 +1,14 @@
 ---
 title: 100 days of Python and R
 author: 
-  - name:novica
-  - url: "authors/novica"
+  - name: novica
+    url: "authors/novica"
 date: '2023-12-29'
-slug: 100-days-of-python-and-r
 categories:
   - R
   - python
 description: 'Random things from 100 days of code challenge.'
 lastmod: '2023-12-29T18:05:13+01:00'
-featured: no
 ---
 
 Today, together with a friend who is looking to get into data analytics, I started 
