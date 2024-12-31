@@ -1,15 +1,14 @@
 ---
 title: 'Using R and {paws} to populate DynamoDB tables #2'
-authors: ['teo']
+author: 
+  - name: teo
+  url: "https://discindo.org/authors/teo"
 date: '2022-05-18'
-slug: []
 categories:
-  - r
-tags:
+  - R
   - paws
   - aws
   - dynamodb
-images: []
 ---
 
 

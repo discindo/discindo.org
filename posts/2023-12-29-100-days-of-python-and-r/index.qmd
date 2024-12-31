@@ -8,7 +8,6 @@ categories:
   - R
   - python
 description: 'Random things from 100 days of code challenge.'
-date-modified: "2024-12-31"
 ---
 
 Today, together with a friend who is looking to get into data analytics, I started 
