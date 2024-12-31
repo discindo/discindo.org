@@ -5,7 +5,7 @@ execute:
   eval: false
 date: "2024-01-15"
 slug: a-simple-workflow-for-async-shiny-with-mirai
-categories: [R, shiny, async programming, mirai]
+categories: [R, Shiny, async programming, mirai]
 tags: [daemons, parallelization, shiny module]
 subtitle: ""
 summary: "An module-based approach to simplify async calls in `{shiny}` apps using `{mirai}`"
