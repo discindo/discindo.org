@@ -4,6 +4,7 @@ listing:
   contents: posts/**/*.qmd
   sort: 'date desc'
   type: default
+  categories: true
   date-format: iso
   fields: [date, title, reading-time, description, categories]
   sort-ui: true
