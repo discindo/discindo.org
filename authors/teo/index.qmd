@@ -7,7 +7,7 @@ about:
     - icon: github
       text: Github
       link: https://github.com/teofiln
-    - icon: graduation-cap
+    - icon: puzzle
       text: Research
       link: https://scholar.google.com/citations?user=2lKX40AAAAAJ&hl=en
     - icon: linkedin
