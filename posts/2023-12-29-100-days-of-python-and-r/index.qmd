@@ -6,15 +6,9 @@ slug: 100-days-of-python-and-r
 categories:
   - R
   - python
-tags:
-  - R
-  - python
-subtitle: ''
-summary: 'Random things from 100 days of code challenge.'
-authors: [novica]
+description: 'Random things from 100 days of code challenge.'
 lastmod: '2023-12-29T18:05:13+01:00'
 featured: no
-projects: []
 ---
 
 Today, together with a friend who is looking to get into data analytics, I started 
