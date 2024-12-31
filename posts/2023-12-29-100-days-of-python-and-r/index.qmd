@@ -2,7 +2,7 @@
 title: 100 days of Python and R
 author: 
   - name: novica
-    url: "authors/novica"
+    url: "https://discindo.org/authors/novica"
 date: '2023-12-29'
 categories:
   - R
