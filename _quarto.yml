@@ -9,9 +9,8 @@ website:
   google-analytics: 'GTM-T3SN4G9'
   cookie-consent: true
   page-footer: "© 2019-2025 Discindo. This work is licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en). The content is aggregated on [r-bloggers](https://r-bloggers.com). Buy us a coffee at [ko-fi](https://ko-fi.com/discindo), or support us on [Patreon](https://www.patreon.com/discindo)."
-"
   navbar:
-    logo: "icon.png"
+    logo: "icon-transparent.png"
     right:
       - projects.qmd
       - series.qmd
