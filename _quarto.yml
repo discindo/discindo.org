@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Discindo"
-  favicon: "icon.png"
+  favicon: "icon-transparent.png"
   site-url: https://discindo.org
   description: "Data science and data engineering solutions with R and Shiny in the cloud."
   google-analytics: 'GTM-T3SN4G9'
