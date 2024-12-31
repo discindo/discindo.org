@@ -4,15 +4,15 @@ image: avatar.jpg
 about:
   template: trestles
   links: 
-- icon: github
-  text: Github
-  link: https://github.com/teofiln
-- icon: graduation-cap
-  text: Research
-  link: https://scholar.google.com/citations?user=2lKX40AAAAAJ&hl=en
-- icon: linkedin
-  text: LinkedIn
-  link: https://www.linkedin.com/in/teofil-nakov-ph-d-874a04202/  
+    - icon: github
+      text: Github
+      link: https://github.com/teofiln
+    - icon: graduation-cap
+      text: Research
+      link: https://scholar.google.com/citations?user=2lKX40AAAAAJ&hl=en
+    - icon: linkedin
+      text: LinkedIn
+      link: https://www.linkedin.com/in/teofil-nakov-ph-d-874a04202/  
 ---
 
 ### Hello,
