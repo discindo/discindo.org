@@ -3,11 +3,8 @@ listing:
   contents: posts/**/*.qmd
   sort: "date desc"
   type: default
-  #max-items: 5
   categories: true
   date-format: iso
-  #sort-ui: true
-  #filter-ui: true
   fields: [date, title, reading-time, description, categories]
   feed: true
 page-layout: full

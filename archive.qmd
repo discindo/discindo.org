@@ -6,5 +6,7 @@ listing:
 type: default
 date-format: iso
 fields: [date, title]
+sort-ui: true
+filter-ui: true
 sort: 'date desc'
 ---
