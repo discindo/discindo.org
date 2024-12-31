@@ -1,6 +1,8 @@
 ---
 title: 100 days of Python and R
-author: 'novica'
+author: 
+  - name:novica
+  - url: "authors/novica"
 date: '2023-12-29'
 slug: 100-days-of-python-and-r
 categories:
