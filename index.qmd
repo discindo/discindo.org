@@ -13,5 +13,5 @@ title-block-banner: true
 
 ## Data are fun!
 
-#### Data science and data engineering solutions with R and Shiny in the Cloud
+#### Data science and data engineering solutions with R and Shiny in the cloud
 
