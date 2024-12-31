@@ -6,7 +6,6 @@ slug: []
 categories:
   - R
   - rskopje
-tags:
   - rmd
   - data analysis
   - reproducible
