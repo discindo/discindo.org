@@ -2,7 +2,7 @@
 title: 'Using R and {paws} to populate DynamoDB tables #2'
 author: 
   - name: teo
-  url: "https://discindo.org/authors/teo"
+    url: "https://discindo.org/authors/teo"
 date: '2022-05-18'
 categories:
   - R
