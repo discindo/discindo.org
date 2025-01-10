@@ -1,0 +1,140 @@
+---
+title: Automating building and ckecking of renv environmnets using GitHub Actions
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2025-01-10'
+categories:
+  - R
+  - renv
+description: ''
+execute:
+  eval: false
+---
+
+One of the challenges facing when moving work from a local computer to a remote 
+server (such as an RStudio Server) where one does not have administrative privileges 
+is how to make sure that the system has all the necessary system libraries be able to 
+install all the needed `R` packages for a given project.
+
+Errors like:
+
+```
+unable to load shared object something.so':
+something.so: cannot open shared object file: No such file or directory
+```
+
+Usually mean that the user has to ask the administrator to install the `something` 
+on the system to be able to compile the package. 
+
+And when one library is missing that is not a big deal (probably). But multiple 
+projects, multiple libraries, and multiple users, means that the administrator may 
+be spammed with requests which may or may not be final: each time `install.packages()` 
+is run a different library may be missing after a previous one was installed.
+
+The obvious solution to this type of a problem is to have Posit Package Manager serving 
+binary packages, but that may not be something that is available because of costs, or whatever.
+
+So, here is a free and public option to track the need for system dependencies and to
+make sure the R environment will be working: GitHub Actions
+
+
+## Step 1: Use `renv` for your projects.
+
+I will not go into details here. I presume everyone is doing this? :) 
+
+When using `renv` you will notice the `renv.lock` that are being generated.
+
+## Step 2: Create a Github repository with folder for each `renv.lock` file
+
+Assuming you have multiple projects/environments you need to check and build have 
+a directory structure where each folder has a `renv.lock` file. For example:
+
+```
+my-renv-files/
+├── my-first-comlicated-env/
+    └── renv.lock
+└── my-second-complicated-env/
+    └── renv.lock
+```
+
+Maybe you would want to add a `README.md` there as well. 
+
+## Step 3: Add a `requirements.txt` file to the repository
+
+This will hold any system libraries that are needed - one per line. You probably 
+know at least one at this point so just add it on the first line.
+
+
+## Step 4: Add a GitHub Action yaml file to the repository.
+
+Create a `.github/workflows` folder in the repository and add the following as
+`build_renv.yaml`:
+
+```
+name: Build renv environments
+
+on:
+  pull_request:
+    paths:
+      - '**/renv.lock'
+  workflow_dispatch: 
+
+jobs:
+  build-renv:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Set up R environment
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.4.1' # Specify your desired R version
+
+      # 3. Install system dependencies
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y $(cat requirements.txt)
+
+      # 4. Install renv package in R
+      - name: Install renv
+        run: |
+          Rscript -e "install.packages('renv')"
+
+      # 5. Rebuild the R environment for the changed renv.lock file
+      - name: Rebuild R environment
+        run: |
+          # Extract the changed renv.lock file
+          file=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep 'renv.lock')
+          dir=$(dirname "$file")
+
+          echo "Restoring renv environment for $dir"
+          cd "$dir"
+          Rscript -e "renv::restore(prompt = FALSE)"
+        env:
+          RENV_PATHS_CACHE: ~/.cache/R/renv
+```
+
+This will run automatically on any pull requests that have `renv.lock` files, 
+and also can be manually triggered (good for testing!).
+
+Then it will setup `R`, install the dependencies, and set up `renv`. 
+
+Then in the final step `5` it will try to build the environment for each folder and 
+fail if system dependencies are missing. So then you can update the `requirements.txt`
+and have it run again until you have a green pass and a complete `requiremtenst.txt` that
+you can share with the administrator. :)
+
+Now, this runs on `Ubuntu` and the server that runs the RStudio Server may be on a different
+`Linux` distribution. And while not ideal, you will still know what are the names of the missing
+libraries, though their names for the other distribution maybe slightly different.
+
+Still, a nice way to keep track of `renv` environments, and especially convenient if you have
+a very specific one that you need to share with coworkers or with the public.
