@@ -5,18 +5,28 @@ page-layout: full
 
 # About us
 
-Welcome to `discindo.org`! This is a space where we document our learning and discoveries
-as we navigate through the data science + data engineering universe. We mostly focus on `R` and
-`Shiny` and how to build data solutions using these in the cloud.
+Welcome to `discindo.org`! This is a space where we document our learning and 
+discoveries as we navigate through the data science + data engineering 
+universe. We mostly focus on `R` and `Shiny` and how to build data solutions 
+using these in the cloud. Other topics we cover include Py-shiny, 
+packages/environments/reproducibility and AWS for R/Shiny/Plumber/Lambda.
 
-Our [projects](/project.html) page has packages and tools we have developed as `free software`.
+Our [projects](/project.html) page has packages and tools we have developed 
+as `free software`.
 
-Our [website](https://discindodata.com) has description of previous projects and references from our clients.
+Our [series](/series.html) page has related posts grouped by topic.
 
-We would love to hear from you! Please get in touch through the [contact](https://discindodata.com/#contact) page, [LinkedIn](https://www.linkedin.com/company/discindo/), or [Twitter](https://twitter.com/podatoci).
+Our [website](https://discindodata.com) has description of previous projects 
+and references from our clients.
 
-If you find this blog useful, consider supporting us on [Patreon](https://www.patreon.com/discindo) or [Ko-fi](https://ko-fi.com/discindo).
+We would love to hear from you! Please get in touch through the 
+[contact](https://discindodata.com/#contact) page, 
+[LinkedIn](https://www.linkedin.com/company/discindo/), or 
+[Twitter](https://twitter.com/podatoci).
 
-[Novica](authors/novica/index.html)
+If you find this blog useful, consider supporting us on 
+[Patreon](https://www.patreon.com/discindo) or 
+[Ko-fi](https://ko-fi.com/discindo).
 
-[Teo](authors/teo/index.html)
+
+[**Novica**](authors/novica/index.html) & [**Teofil**](authors/teo/index.html)

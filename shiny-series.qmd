@@ -1,0 +1,14 @@
+---
+title: "Series: shiny"
+listing:
+  contents: posts/shiny
+sort: "date desc"
+type: default
+date-format: iso
+categories: false
+sort-ui: false
+filter-ui: false
+fields: [date, title, reading-time, description]
+page-layout: full
+title-block-banner: true
+---

@@ -16,7 +16,6 @@ about:
 ---
 
 ### Hello,
- My interests include R, Shiny, Bioinformatics, and integrating these in the cloud
-- R/Shiny/Cloud
-- Bioinformatics
-- Diatoms
+I am an aquatic evolutionary biologist and diatomist at the the University of 
+Costa Rica. On this blog, I usually write about  R, Shiny, Bioinformatics, and 
+integrating these in the cloud.

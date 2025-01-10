@@ -4,7 +4,25 @@ page-layout: full
 
 ---
 
-## Here goes 
+## [R2lambda](r2lambda-series.html)
 
-##### [r2lambda-series](r2lambda-series.html)
-This series contains....
+#### Getting started and becoming productive with AWS Lambda from R
+This series contains posts about getting started with deploying `R` code to 
+AWS Lambda. It follows the development of our open source `R` package 
+[`{r2lambda}`](https://github.com/discindo/r2lambda).
+
+## [Shiny](shiny-series.html)
+
+#### Various helpful posts on `{shiny}`
+We do a lot of `{shiny}` work, and sometimes it happens that we run into a neat 
+solution or learned something unexpected that we feel its worth sharing, 
+so we write a blog post about it. Among others, there are posts here on async 
+approaches for `{shiny}`, on multi-session `{shiny}`, and various UI tidbits.
+
+## [R/Python packaging and environments](pkg-env-series.html)
+
+#### Package and environment management in R and Python
+The average programmer and data scientist in a collaborative environment
+spends a hefty chunk of their time on managing environments and packaging code
+for sharing, collaboration or reproducibility. We are no different, and often
+write about these topics. 
