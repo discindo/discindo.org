@@ -7,7 +7,7 @@ date: '2025-01-10'
 categories:
   - R
   - renv
-description: ''
+description: 'A quick how-to on building `renv` environmnets with GitHub Actions'
 execute:
   eval: false
 ---
