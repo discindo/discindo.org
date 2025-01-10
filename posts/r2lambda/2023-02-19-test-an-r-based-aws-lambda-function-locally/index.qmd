@@ -6,7 +6,6 @@ slug: test-an-r-based-aws-lambda-function-locally
 categories:
   - AWS
   - R
-tags:
   - paws
   - AWS Lambda
   - AWS IAM

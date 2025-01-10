@@ -8,7 +8,6 @@ slug: an-r-aws-lambda-function-to-download-tidytuesday-datasets
 categories:
   - AWS
   - R
-tags:
   - r2lambda
   - AWS Lambda
   - tidytuesday

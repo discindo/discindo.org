@@ -7,7 +7,6 @@ date: '2022-07-24'
 slug: invoke-an-aws-lambda-function-with-r-and-paws
 categories:
   - R
-tags:
   - aws
   - paws
   - AWS lambda

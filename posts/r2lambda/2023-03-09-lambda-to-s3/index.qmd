@@ -8,7 +8,6 @@ slug: lambda-to-s3
 categories:
   - AWS
   - R
-tags:
   - r2lambda
   - AWS Lambda
   - AWS EventBridge

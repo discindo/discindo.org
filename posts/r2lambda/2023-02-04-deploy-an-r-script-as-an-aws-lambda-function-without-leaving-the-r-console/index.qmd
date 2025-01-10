@@ -6,7 +6,6 @@ slug: deploy-an-r-script-as-an-aws-lambda-function-without-leaving-the-r-console
 categories:
   - R
   - AWS
-tags:
   - paws
   - AWS Lambda
   - AWS IAM
