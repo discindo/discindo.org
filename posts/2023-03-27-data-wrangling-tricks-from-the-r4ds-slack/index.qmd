@@ -7,7 +7,6 @@ execute:
   eval: false
 categories:
   - R
-tags:
   - r4ds
   - data analysis
   - shortcuts

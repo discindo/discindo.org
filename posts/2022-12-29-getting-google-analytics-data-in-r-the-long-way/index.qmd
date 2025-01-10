@@ -5,7 +5,6 @@ date: '2022-12-29'
 slug: getting-google-analytics-data-in-r-the-long-way
 categories:
   - R
-tags:
   - google analytics
   - big query
   - dbt

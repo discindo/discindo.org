@@ -7,7 +7,6 @@ date: '2022-04-30'
 slug: []
 categories:
   - R
-tags:
   - paws
   - aws
   - dynamodb

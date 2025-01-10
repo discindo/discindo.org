@@ -6,9 +6,8 @@ slug: using-stevedore-to-manage-docker-based-variant-calling-pipelines-from-r
 categories: 
   - R
   - Bioinformatics
-tags: 
   - stevedore
-  - docker
+  - Docker
   - gatk
   - deepVariant
 subtitle: ''

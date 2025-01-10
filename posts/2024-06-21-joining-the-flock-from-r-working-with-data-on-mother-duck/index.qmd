@@ -5,7 +5,6 @@ date: '2024-06-21'
 slug: joining-the-flock-from-r-working-with-data-on-motherduck
 categories:
   - R
-tags:
   - duckdb
   - database
 subtitle: ''

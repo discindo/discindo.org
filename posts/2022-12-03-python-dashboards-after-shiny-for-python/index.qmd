@@ -5,7 +5,6 @@ date: '2022-12-03'
 slug: python-dashboards-after-shiny-for-python
 categories:
   - Python
-tags:
   - dash
   - streamlit
   - app

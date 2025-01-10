@@ -5,7 +5,6 @@ date: '2022-11-17'
 slug: using-wikidata-to-draw-networks-of-politically-exposed-persons-2
 categories:
   - python
-tags:
   - wikidata
   - pep
   - data

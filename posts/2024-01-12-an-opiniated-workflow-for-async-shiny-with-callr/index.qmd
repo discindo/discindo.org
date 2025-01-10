@@ -5,8 +5,8 @@ date: "2024-01-12"
 execute:
   eval: false
 slug: an-opiniated-workflow-for-async-shiny-with-callr
-categories: [R, Shiny, async programming, callr]
-tags: [shiny module]
+categories: [R, Shiny, async programming, callr, shiny module]
+tags: []
 subtitle: ""
 summary: "An approach to simplify and standardize async calls in `{shiny}` apps using `{callr}`"
 authors: [teo]

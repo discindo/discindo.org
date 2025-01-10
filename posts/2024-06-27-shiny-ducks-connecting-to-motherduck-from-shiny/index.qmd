@@ -5,7 +5,6 @@ date: '2024-06-28'
 slug: shiny-ducks-connecting-to-motherduck-from-shiny
 categories:
   - R
-tags:
   - shiny
   - duckdb
   - motherduck

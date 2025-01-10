@@ -5,7 +5,6 @@ date: '2021-04-21'
 slug: windsorair-package-for-accessing-windsorai-api-from-r
 categories:
   - R
-tags:
   - package
   - windsorair
 images: []
