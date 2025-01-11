@@ -1,1 +1,11 @@
 /* css styles */
+
+.navbar-brand {
+  font-size: xxx-large;
+}
+
+.navbar-logo {
+	max-height: 80px;
+	width: auto;
+	padding-right: 4px;
+}

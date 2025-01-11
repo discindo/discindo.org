@@ -1,5 +1,5 @@
 ---
-title: Automating building and ckecking of renv environmnets using GitHub Actions
+title: Automating building and ckecking of renv environments using GitHub Actions
 author: 
   - name: novica
     url: "https://discindo.org/authors/novica"
@@ -8,7 +8,7 @@ categories:
   - R
   - renv
   - GitHub Actions
-description: 'A quick how-to on building `renv` environmnets with GitHub Actions.'
+description: 'A quick how-to on building `renv` environments with GitHub Actions.'
 execute:
   eval: false
 ---
