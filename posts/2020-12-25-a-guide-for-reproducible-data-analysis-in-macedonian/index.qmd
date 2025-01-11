@@ -6,10 +6,10 @@ slug: []
 categories:
   - R
   - rskopje
-  - rmd
+  - Rmd
   - data analysis
   - reproducible
-  - workshops
+  - workshop
 images: []
 ---
 

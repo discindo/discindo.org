@@ -7,9 +7,9 @@ date: '2022-07-24'
 slug: invoke-an-aws-lambda-function-with-r-and-paws
 categories:
   - R
-  - aws
+  - AWS
   - paws
-  - AWS lambda
+  - AWS Lambda
   - .Renviron
 subtitle: ''
 summary: ''

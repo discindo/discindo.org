@@ -8,7 +8,7 @@ slug: []
 categories:
   - R
   - paws
-  - aws
+  - AWS
   - dynamodb
 images: []
 ---
