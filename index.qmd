@@ -8,7 +8,6 @@ listing:
   date-format: iso
   fields: [date, title, reading-time, description, categories]
   feed: 
-    true
     categories: 
       - R
 page-layout: full
