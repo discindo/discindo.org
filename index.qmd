@@ -9,7 +9,8 @@ listing:
   fields: [date, title, reading-time, description, categories]
   feed: 
     true
-    categories: R
+    categories: 
+      - R
 page-layout: full
 title-block-banner: true
 ---
