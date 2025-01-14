@@ -1,7 +1,7 @@
 ---
-title: "Series: shiny"
+title: "Series: r2lambda"
 listing:
-  contents: posts/shiny
+  contents: ../posts/r2lambda/*/*.qmd
 sort: "date desc"
 type: default
 date-format: iso

@@ -1,0 +1,11 @@
+---
+title: Cocoa
+image: avatar.jpg
+about:
+  template: trestles
+  
+---
+
+### 🐶 
+
+Cocoa helps too.

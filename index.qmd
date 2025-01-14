@@ -18,7 +18,7 @@ title-block-banner: true
 
 ## Data science and data engineering with R and Shiny in the cloud
 
-![](image05.jpg)
+![](images/cocoa.jpg)
 
 ### Posts  
 

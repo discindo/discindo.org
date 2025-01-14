@@ -1,7 +1,8 @@
 ---
-title: "Series: r2lambda"
+title: "Series: pkg/env"
 listing:
-  contents: posts/r2lambda
+  contents: 
+    - ../posts/pkg-env/*/*.qmd
 sort: "date desc"
 type: default
 date-format: iso

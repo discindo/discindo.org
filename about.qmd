@@ -21,12 +21,9 @@ and references from our clients.
 
 We would love to hear from you! Please get in touch through the 
 [contact](https://discindodata.com/#contact) page, 
-[LinkedIn](https://www.linkedin.com/company/discindo/), or 
-[Twitter](https://twitter.com/podatoci).
+[LinkedIn](https://www.linkedin.com/company/discindo/).
 
-If you find this blog useful, consider supporting us on 
-[Patreon](https://www.patreon.com/discindo) or 
-[Ko-fi](https://ko-fi.com/discindo).
+If you find this blog useful, consider [supporting](https://ko-fi.com/discindo).
 
-
-[**Novica**](authors/novica/index.html) & [**Teofil**](authors/teo/index.html)
+[**Novica**](authors/novica/index.html), [**Teofil**](authors/teo/index.html) &
+[**Cocoa**](authors/cocoa/index.html)

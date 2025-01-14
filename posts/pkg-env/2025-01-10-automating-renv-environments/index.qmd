@@ -13,6 +13,8 @@ execute:
   eval: false
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 One of the challenges facing when moving work from a local computer to a remote 
 server (such as an RStudio Server) where one does not have administrative privileges 
 is how to make sure that the system has all the necessary system libraries be able to 
