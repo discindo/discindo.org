@@ -4,7 +4,13 @@ author:
   - name: novica
     url: "https://discindo.org/authors/novica"
 date: '2024-09-29'
-categories: [R, Python, Automation, shiny, Posit connect, GitHub actions]
+categories: 
+  - R
+  - Python
+  - Automation
+  - Shiny
+  - Posit Connect
+  - GitHub Actions
 description: 'Clarifying confusion regarding using GitHub Actions to deploy R and Python Shiny apps'
 ---
 
