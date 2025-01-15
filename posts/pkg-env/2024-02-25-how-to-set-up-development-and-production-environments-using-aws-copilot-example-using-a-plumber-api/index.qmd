@@ -2,16 +2,12 @@
 title:
   "How to set up development and production environments using AWS Copilot: Example
   using a `plumber` API."
-author: "Teo"
+author: 
+  - name: Teo
+    url: "https://discindo.org/authors/teofil"
 date: "2024-02-25"
-slug: how-to-set-up-development-and-production-environments-using-aws-copilot-example-using-a-plumber-api
 categories: [R, API, plumber, AWS, AWS Copilot, GitHub Actions, AWS ECR, AWS IAM, AWS AppRunner, CD/CI, Automation]
-subtitle: ""
-summary: "In this post I dive deep into setting up a dev/stage/prod environment setup for a `{plumber}` API on AWS AppRunner"
-authors: [teo]
-lastmod: "2024-02-25T00:12:16-06:00"
-featured: yes
-projects: []
+description: "In this post I dive deep into setting up a dev/stage/prod environment setup for a `{plumber}` API on AWS AppRunner"
 ---
 
 In this post I am documenting step-by-step the process of deploying
