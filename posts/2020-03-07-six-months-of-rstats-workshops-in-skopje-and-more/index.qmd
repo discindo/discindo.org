@@ -14,6 +14,8 @@ description: "Few notes on running R and Python workshops in Skopje."
 image: "images/rskopje.png"
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 In August 2019 I [sent](https://twitter.com/therealpsmst/status/1161717504298950657) a tweet asking if there any `R` enthusiasts in Skopje. The tweet got some attention (8 Retweets, 22 Likes) and encouraged us to have our  on September 3rd we had our [first event](https://kika.spodeli.org/event/tidytuesday-%d0%b2%d0%be-%d0%ba%d0%b8%d0%ba%d0%b0-%d0%b2%d1%82%d0%be%d1%80%d0%bd%d0%b8%d0%ba-3-9-2019-%d0%b2%d0%be-19-%d1%87/) on September 3rd in the [Skopje Hacklab KIKA](https://wiki.hackerspaces.org/KIKA). 
 
 We've had metups (almost) every Tuesday since, first in line with the [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/) events, using the provided datasets to learn the `Tidyverse`, and then as the group evolved, we moved to other things such as the [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/) course. Around 15 people have come and gone through the events, some coming once just out of curiosity, others coming each event and learning enough to help other newcomers as they show up.

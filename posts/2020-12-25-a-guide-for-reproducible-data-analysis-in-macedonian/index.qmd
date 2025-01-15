@@ -13,6 +13,7 @@ categories:
 description: "An overview of the document we produced for the reproducible data analysis workshop."
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 2020 has been a sad and difficult year for many and certainly unusual for all of us. For us at Discindo, the adjustments required by limited mobility and closures were not easy, but our work is mostly online and remote anyway, so we are surely much better off than most.
 

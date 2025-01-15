@@ -14,6 +14,8 @@ categories:
 description: "R4DS slack tips and tricks."
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 Every now and then there is a question on the [R4DS
 slack](https://www.rfordatasci.com/) that produces a large number of
 replies. This case was particularly interesting because the user that

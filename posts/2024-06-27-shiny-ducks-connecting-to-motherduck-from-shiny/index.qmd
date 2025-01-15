@@ -12,6 +12,7 @@ categories:
 description: 'Few notes about getting up and running with Shiny and Mother duck'
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 In a previous post I wrote about how to [connect to MotherDuck from R](post/joining-the-flock-from-r-working-with-data-on-motherduck/). However, 
 the process described there, where you click in the browser to authenticate, 

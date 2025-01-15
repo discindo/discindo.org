@@ -12,6 +12,8 @@ description: "Introduction on getting data from Wikidata using python"
 image: "images/plot.png"
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 Some time ago I was doing a demo for querying Politically Exposed Persons from Wikidata. This 
 was supposed to be a part of a bigger project which didn't materialize. Nevertheless the code 
 can be a good exercise in the topic, so I am sharing it for anyone that might be curious.

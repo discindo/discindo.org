@@ -11,6 +11,7 @@ categories:
 description: "Exploring other dashboarding option in Python"
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 After building a [demo](/post/packaging-a-python-shiny-app) in Shiny for Python I decided to see how to build a demo dashboard with the other tools available for Python, namely [Streamlit](https://streamlit.io/) and [Dash](https://dash.plotly.com/).
 

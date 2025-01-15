@@ -11,6 +11,7 @@ categories:
 description: "Building a PyShiny app for displaing data from Wikidata"
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 In the [previous post](/posts/using-wikidata-to-draw-networks-of-politically-exposed-persons-1) I outlined the approach to query data from Wikidata, 
 and wrangle your way to a result about some relationships between politically exposed 

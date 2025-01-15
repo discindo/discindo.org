@@ -12,7 +12,7 @@ categories:
 description: "How to start on using R with paws to work with AWS DynamoDB, part 2."
 ---
 
-
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 In our [previous post](https://www.discindo.org/post/2022-04-30-using-r-and-paws-to-populate-dynamodb-tables/) we covered some basics of using the `paws` `SDK` to interact with AWS `DynamoDB` from `R`. We wrote a few simple functions to prepare `R` lists in the appropriate format for `DynamoDB` and some wrappers to put these lists as items in the remote NoSQL database. 
 
