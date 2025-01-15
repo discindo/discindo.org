@@ -1,19 +1,15 @@
 ---
 title: 'Rstudio in the cloud for those of us with old laptops'
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2023-01-20'
-slug: rstudio-in-the-cloud-for-those-of-us-with-old-laptops
+description: 'A guide on setting up Rstudio server on an AWS EC2 instance for users with older laptops, including steps for installation, configuration, and secure access.'
 categories:
   - R
   - Rstudio
   - AWS
   - EC2
-subtitle: ''
-summary: ''
-authors: [novica]
-lastmod: '2023-01-20T14:38:47+01:00'
-featured: no
-projects: []
 ---
 
 

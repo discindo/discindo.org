@@ -9,8 +9,6 @@ categories:
   - renv
   - GitHub Actions
 description: 'A quick how-to on building `renv` environments with GitHub Actions.'
-execute:
-  eval: false
 ---
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)

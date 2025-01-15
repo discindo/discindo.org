@@ -1,21 +1,17 @@
 ---
 title: 'Rstudio in the cloud for those of us with old laptops part 2: automating with
   terraform'
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2023-01-29'
-slug: rstudio-in-the-cloud-for-those-of-us-with-old-laptops-part-2-automating-with-terraform
 categories:
   - R
   - RStudio
   - AWS
   - EC2
   - Terraform
-subtitle: ''
-summary: ''
-authors: [novica]
-lastmod: '2023-01-29T14:44:30+01:00'
-featured: no
-projects: []
+description: "In this post, we automate the process of setting up an RStudio server on AWS EC2 using Terraform. This guide covers the prerequisites, writing the Terraform configuration, and extending it to install R and RStudio server on the instance."
 ---
 
 ## Setting the scene for automation

@@ -1,15 +1,11 @@
 ---
 title: 'Noting the differences in deploying R vs Python apps on Posit Connect'
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2024-09-29'
-slug: 'noting-the-differences-in-deploying-r-vs-python-apps-on-posit-connect'
 categories: [R, Python, Automation, shiny, Posit connect, GitHub actions]
-subtitle: ''
-summary: 'Clarifying confusion regarding using GitHub Actions to deploy R and Python Shiny apps'
-authors: [novica]
-lastmod: '2024-09-29T12:01:18+02:00'
-featured: no
-projects: []
+description: 'Clarifying confusion regarding using GitHub Actions to deploy R and Python Shiny apps'
 ---
 
 I ended my previous post [Using uv to manage the environment for a Python Shiny app and setting up a GitHub action 

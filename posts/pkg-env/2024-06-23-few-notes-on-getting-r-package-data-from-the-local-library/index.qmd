@@ -1,17 +1,13 @@
 ---
 title: Few notes on getting R package data from the local library
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2024-06-23'
-slug: few-notes-on-getting-r-package-data-from-the-local-library
 categories:
   - R
   - package
-subtitle: ''
-summary: 'The missing conventions in the descriptions of packages'
-authors: [novica]
-lastmod: '2024-06-23T10:29:32+02:00'
-featured: no
-projects: []
+description: 'The missing conventions in the descriptions of packages'
 ---
 
 I am involved in a [Posit Team](https://posit.co/products/enterprise/team/) 

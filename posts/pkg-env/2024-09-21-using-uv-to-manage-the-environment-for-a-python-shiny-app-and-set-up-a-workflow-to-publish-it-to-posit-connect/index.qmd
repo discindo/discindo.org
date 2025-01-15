@@ -1,22 +1,18 @@
 ---
 title: Using uv to manage the environment for a Python Shiny app and setting up a GitHub action 
   to publish it to Posit Connect
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2024-09-21'
-slug: using-uv-to-manage-the-environment-for-a-python-shiny-app-and-set-up-a-workflow-to-publish-it-to-posit-connect
 categories:
   - python
   - automation
   - shiny
   - uv
   - GitHub Actions
-subtitle: ''
-summary: 'A step-by-step guide to work with a Python Shiny app with the help of 
+description: 'A step-by-step guide to work with a Python Shiny app with the help of 
 uv and a GitHub Actions workflow to have it published from GitHub to Posit Connect.'
-authors: [novica]
-lastmod: '2024-09-21T20:23:53+02:00'
-featured: no
-projects: []
 ---
 
 ## It all starts with a notification

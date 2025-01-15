@@ -1,19 +1,15 @@
 ---
 title: Packaging a Python Shiny app
-author: novica
+author:
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2022-11-18'
-slug: packaging-a-python-shiny-app
+description: "A step-by-step guide on how to package a Python Shiny app, including directory structure, necessary files, and commands to build and run the package."
 categories:
   - Python
   - shiny
   - package
   - golem
-subtitle: ''
-summary: ''
-authors: [novica]
-lastmod: '2022-11-18T21:52:39+01:00'
-featured: no
-projects: []
 ---
 
 After spending few years writing R Shiny apps with {golem}, the first thing I thought about when writing the Python Shiny [demo](https://github.com/novica/pyshinywikidata) was is it possible to convert it to a python package and if yes how to it.
