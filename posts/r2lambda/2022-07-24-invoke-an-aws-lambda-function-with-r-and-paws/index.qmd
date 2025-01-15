@@ -19,6 +19,8 @@ featured: no
 projects: []
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 In recent weeks, I have been trying to learn more about using the `{paws}` software development kit to
 interact with Amazon Web Services from `R`. So far, my focus was on the basics of `DynamoDB`. How
 to put one item in the database, and how to migrate reasonably sized table into `DynamoDB`. There are 

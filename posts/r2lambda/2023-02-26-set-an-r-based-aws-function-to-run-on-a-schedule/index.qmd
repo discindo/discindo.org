@@ -24,6 +24,8 @@ projects: ['r2lambda']
 show_related: true
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 A common use of the AWS Lambda service is to set a function to run on a 
 recurring schedule, e.g. to collect logs, move data, or perform some ETL process.
 In this post, we'll see how we can set up an AWS Lambda function, running `R`, on 

@@ -20,6 +20,8 @@ projects: ['r2lambda']
 show_related: true
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 ## Use `{r2lambda}` to download Tidytuesday dataset
 
 In this exercise, we'll create an AWS Lambda function that downloads
