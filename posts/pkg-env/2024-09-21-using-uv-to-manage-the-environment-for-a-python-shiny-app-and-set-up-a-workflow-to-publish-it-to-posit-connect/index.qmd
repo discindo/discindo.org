@@ -11,8 +11,7 @@ categories:
   - shiny
   - uv
   - GitHub Actions
-description: 'A step-by-step guide to work with a Python Shiny app with the help of 
-uv and a GitHub Actions workflow to have it published from GitHub to Posit Connect.'
+description: 'A step-by-step guide to work with a Python Shiny app with the help of uv and a GitHub Actions workflow to have it published from GitHub to Posit Connect.'
 ---
 
 ## It all starts with a notification
