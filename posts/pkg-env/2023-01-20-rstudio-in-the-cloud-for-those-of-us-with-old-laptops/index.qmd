@@ -12,6 +12,7 @@ categories:
   - EC2
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 I use a Thinkpad from 2015 for my day to day work, and you can imagine things are getting slower as time goes by. Recently I had to test some computation in an R package I am developing and my computer froze multiple times. I keep seeing the memory usage indicator in Rstudio going red as soon as something more demanding is ran. 
 

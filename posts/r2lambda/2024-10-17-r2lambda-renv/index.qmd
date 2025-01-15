@@ -9,6 +9,7 @@ description: 'A demo of two newly added features in the `{r2lambda}` R package. 
 projects: ['r2lambda']
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 ## Deploy a project with multiple R scripts and `{renv}`-managed environment to AWS Lambda
 

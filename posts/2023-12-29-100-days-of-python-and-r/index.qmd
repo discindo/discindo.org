@@ -10,6 +10,8 @@ categories:
 description: 'Random things from 100 days of code challenge.'
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 Today, together with a friend who is looking to get into data analytics, I started 
 doing the [100 days of Python](https://replit.com/learn/100-days-of-python) 
 challenge at Replit.

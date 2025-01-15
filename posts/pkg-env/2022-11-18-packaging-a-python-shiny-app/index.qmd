@@ -12,6 +12,8 @@ categories:
   - golem
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 After spending few years writing R Shiny apps with {golem}, the first thing I thought about when writing the Python Shiny [demo](https://github.com/novica/pyshinywikidata) was is it possible to convert it to a python package and if yes how to it.
 
 I was surprised to learn that it is actually pretty simple to do that, especially when compared to the {golem} environment, which I feel has a learning curve to master.

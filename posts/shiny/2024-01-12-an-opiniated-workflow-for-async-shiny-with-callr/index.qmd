@@ -13,8 +13,9 @@ categories:
   - callr
   - shiny module
 description: "An approach to simplify and standardize async calls in `{shiny}` apps using `{callr}`"
-
 ---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 In the `R/Shiny` community we are fortunate to have several approaches for async programming.
 It is an active field of development with a variety of

@@ -7,12 +7,14 @@ author:
 date: '2024-09-21'
 categories:
   - python
-  - automation
-  - shiny
+  - Automation
+  - Shiny
   - uv
   - GitHub Actions
 description: 'A step-by-step guide to work with a Python Shiny app with the help of uv and a GitHub Actions workflow to have it published from GitHub to Posit Connect.'
 ---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 ## It all starts with a notification
 

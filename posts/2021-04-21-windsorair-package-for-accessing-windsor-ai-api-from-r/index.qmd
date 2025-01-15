@@ -11,6 +11,8 @@ categories:
 description: "Few notes on the package I wrote for Windsor.ai."
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 I recently got acquainted with [Windsor.ai](https://windsor.ai) -- a hub for connecting various sources of marketing data like Facebook ads or Google Analytics. The platform is interesting because it provides ways to analyze and visualize your merged marketing data through template dashboards or to pipe the data to any number of tools (Python, R, Google data Studio, Tableau, etc). In collaboration with the people at Winsdor.ai, I developed a very simple package to interface with the [Windsor.ai API](https://www.windsor.ai/api-fields/).
 
 The new package, called `windsoraiR`, is available on [CRAN](https://cran.r-project.org/package=windsoraiR) and on [Github](https://github.com/windsor-ai/windsoraiR). Its first incarnation is rather simple. I just provide one function to access the API and return the queried data in the form of a `data.frame` making it super easy to do some additional wrangling, charting or analysis. To access data from the Windsor.ai API, one needs to acquire a free API key and set up data sources (this can be pretty much any online channel of marketing data, see more on the [Windsor.ai website](https://windsor.ai)).

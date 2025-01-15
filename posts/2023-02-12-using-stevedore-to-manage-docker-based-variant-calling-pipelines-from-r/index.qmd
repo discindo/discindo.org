@@ -14,6 +14,8 @@ categories:
 description: "Docker and stevedore for overcoming usual obstacles in complicated pipelines."
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 # Docker-based variant-calling pipelines
 
 Encapsulating large and complex software applications or packages in `docker` images

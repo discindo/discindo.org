@@ -20,6 +20,8 @@ categories:
 projects: ['r2lambda']
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 Creating AWS Lambda functions from `R` code can be a powerful way to make our 
 local `R` code available in the cloud as an on-demand serverless service. In recent 
 weeks I've been working on my package [r2lambda](https://github.com/discindo/r2lambda) 

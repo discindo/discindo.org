@@ -11,6 +11,8 @@ categories:
 description: "On writing my first R package and publishing to CRAN."
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 I wanted to learn to write an R package for some time, but I didn't have an idea what should the package do. Then I saw [newscatcher](https://github.com/kotartemiy/newscatcher) and decided to build an R clone, and [newscatcheR](https://github.com/discindo/newscatcheR/) was born. It's a nice little package that enables quick access to RSS feeds of news sites. These are some things I learned while building it.
 
 ## There are a lot of great resources for building R packages out there

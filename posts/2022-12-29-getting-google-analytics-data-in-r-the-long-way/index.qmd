@@ -12,6 +12,8 @@ categories:
 description: "An overview of how to work with dbt and Big Query to analyze Google Analytics data"
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 One of the ways for getting Google Analytics data in R is using the excellent
 package [googleAnalyticsR](https://code.markedmondson.me/googleAnalyticsR/). 
 

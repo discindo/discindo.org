@@ -12,6 +12,8 @@ description: 'Using R to connect to MotherDuck, the cloud data warehouse powered
 image: "images/particles.png"
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 With DuckDB [releasing](https://duckdb.org/2024/06/03/announcing-duckdb-100.html) 
 version 1.0.0 on June 3rd, and MotherDuck [following](https://motherduck.com/blog/announcing-motherduck-general-availability-data-warehousing-with-duckdb/) with the general availability announcement on June 11th, it is a perfect 
 opportunity to see how both can be used from `R`. I work for an organization where

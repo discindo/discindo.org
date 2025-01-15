@@ -10,6 +10,8 @@ categories: [R, API, plumber, AWS, AWS Copilot, GitHub Actions, AWS ECR, AWS IAM
 description: "In this post I dive deep into setting up a dev/stage/prod environment setup for a `{plumber}` API on AWS AppRunner"
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 In this post I am documenting step-by-step the process of deploying
 dev/stage/prod environments and instances of a `{plumber}` API on
 [AWS AppRunner](https://aws.amazon.com/apprunner/) using

@@ -18,6 +18,7 @@ description: 'An introduction to working with AWS S3 from R and a step-by-step w
 projects: ['r2lambda']
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 ## Overview
 

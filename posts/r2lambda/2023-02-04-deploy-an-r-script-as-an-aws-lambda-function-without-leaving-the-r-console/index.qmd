@@ -20,6 +20,8 @@ categories:
 projects: ['r2lambda']
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 # Overview and motivation
 
 AWS Lambda is a serverless compute service that lets us deploy any code as a cloud
