@@ -1,18 +1,17 @@
 ---
 title: A simple workflow for async {shiny} with {mirai}
-author: "teo"
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 execute:
   eval: false
-date: "2024-01-15"
-slug: a-simple-workflow-for-async-shiny-with-mirai
+date: '2024-01-15'
 categories: [R, Shiny, async programming, mirai, daemons, parallelization, shiny module]
-subtitle: ""
-summary: "An module-based approach to simplify async calls in `{shiny}` apps using `{mirai}`"
-authors: [teo]
-lastmod: "2024-01-15T13:10:09-06:00"
-featured: no
-projects: []
+description: >
+  A module-based approach to simplify async calls in `{shiny}` apps using `{mirai}`
 ---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 In my [previous post](https://discindo.org/post/an-opiniated-workflow-for-async-shiny-with-callr/),
 I developed a `shiny` module to encapsulate the logic of sending and monitoring background async

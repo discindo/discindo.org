@@ -14,6 +14,8 @@ categories:
 description: using-shiny-i18n-with-golem-for-server-side-translation
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 In this post we share a useful tidbit we learned while developing the demo for the [`OpenBudgetMKD`](discindo.shinyapps.io/OpenBudgetNMK/) application. 
 
 Like with most projects at Discindo, the `OpenBudgetMKD` application is based on `R` and `{shiny}`. It uses the `{bs4Dash}` and `shinyWidgets` for their excellent UI components, is packaged with`{golem}`, and will be available in Macedonian, Albanian, and English. From a programming perspective, the most interesting aspect for us was implementing internationalization using the `{shiny.i18n}` package and integrating this into a `{golem}`ized `{shiny}` application. These tools integrate seamlessly and make creating rather powerful and great looking applications easy. Many thanks to the developers for creating these awesome packages!

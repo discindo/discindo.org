@@ -1,22 +1,20 @@
 ---
 title: 'How to invoke an AWS Lambda function with R and paws'
-author: Teo
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 execute:
   eval: false
 date: '2022-07-24'
-slug: invoke-an-aws-lambda-function-with-r-and-paws
+description: >
+  This post provides a step-by-step guide on how to invoke an AWS Lambda function using R and the `{paws}` package. It covers setting up AWS credentials, starting a Lambda service, listing available functions, and invoking a specific Lambda function with a payload. The post also includes examples and a custom function to streamline the process.
 categories:
   - R
   - AWS
   - paws
   - AWS Lambda
   - .Renviron
-subtitle: ''
-summary: ''
-authors: ['teo']
-lastmod: '2022-07-24T16:42:34-06:00'
-featured: no
-projects: []
+projects: ['r2lambda']
 ---
 
 In recent weeks, I have been trying to learn more about using the `{paws}` software development kit to

@@ -3,7 +3,7 @@ title:
   "How to set up development and production environments using AWS Copilot: Example
   using a `plumber` API."
 author: 
-  - name: Teo
+  - name: teo
     url: "https://discindo.org/authors/teofil"
 date: "2024-02-25"
 categories: [R, API, plumber, AWS, AWS Copilot, GitHub Actions, AWS ECR, AWS IAM, AWS AppRunner, CD/CI, Automation]

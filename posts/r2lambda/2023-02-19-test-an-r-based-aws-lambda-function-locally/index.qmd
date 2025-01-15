@@ -1,8 +1,13 @@
 ---
 title: Test an R-based AWS lambda function locally before deploying to the cloud
-author: teo
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
+execute:
+  eval: false
 date: '2023-02-19'
-slug: test-an-r-based-aws-lambda-function-locally
+description: >
+  Learn how to test an R-based AWS Lambda function locally before deploying it to the cloud using the `r2lambda` package. This post covers the steps to build, test, and deploy your Lambda function, ensuring it works correctly before using AWS resources.
 categories:
   - AWS
   - R
@@ -12,13 +17,7 @@ categories:
   - AWS ECR
   - Docker
   - package
-subtitle: ''
-summary: ''
-authors: [teo]
-lastmod: '2023-02-19T14:44:41-06:00'
-featured: no
 projects: ['r2lambda']
-show_related: true
 ---
 
 Creating AWS Lambda functions from `R` code can be a powerful way to make our 

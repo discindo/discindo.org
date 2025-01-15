@@ -1,17 +1,23 @@
 ---
 title: Building a multi-session {shiny} application with {brochure}
-authors: ['teo']
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2022-05-09'
-slug: []
 categories:
   - golem
   - R
   - Shiny
   - app
   - brochure
-images: []
+description: >
+    In this post, I share my experience building a multi-session Shiny application using the {brochure} package. 
+    I discuss the advantages of using {brochure} for creating independent Shiny sessions for different pages, 
+    the integration with {golem}, and the steps to deploy the application on shinyapps.io. 
+    Additionally, I provide a solution for handling URL redirects in different environments.
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 # About `{brochure}`
 

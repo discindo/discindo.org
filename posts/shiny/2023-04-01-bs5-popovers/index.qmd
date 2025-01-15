@@ -1,16 +1,14 @@
 ---
 title: How to use Bootstrap 5 popovers in Shiny applications
-author: 'teo'
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2023-04-01'
-slug: bs5-popovers
 categories: [R, Shiny, bslib, Bootstrap 5, popover, tooltip, popper.js]
-subtitle: ''
-summary: 'A few tips on using bootstrap 5 popovers in Shiny'
-authors: [teo]
-lastmod: '2023-04-01T06:22:15-06:00'
-featured: no
-projects: []
+description: 'A few tips on using bootstrap 5 popovers in Shiny'
 ---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 Creating custom user interfaces with `{shiny}` and `{bslib}` has never 
 been easier. Using `{bslib}` it is also incredibly simple to choose and 

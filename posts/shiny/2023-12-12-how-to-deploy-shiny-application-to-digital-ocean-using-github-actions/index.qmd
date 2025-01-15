@@ -1,19 +1,16 @@
 ---
 title: How to deploy Shiny application to Digital Ocean using GitHub Actions
-author: 'teo'
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2023-12-12'
 execute:
   eval: false
-slug: how-to-deploy-shiny-application-to-digital-ocean-using-github-actions
 categories: [R, Shiny, GitHub Actions, Digital Ocean, ShinyProxy]
-subtitle: ''
-summary: 'A walkthrough on setting up GitHub Actions for automatic deployment 
-of Shiny application to DigitalOcean server running ShinyProxy'
-authors: [teo]
-lastmod: '2023-12-12T12:01:07-06:00'
-featured: yes
-projects: []
+description: 'A walkthrough on setting up GitHub Actions for automatic deployment of Shiny application to DigitalOcean server running ShinyProxy'
 ---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 ## ShinyProxy on DigitalOcean
 

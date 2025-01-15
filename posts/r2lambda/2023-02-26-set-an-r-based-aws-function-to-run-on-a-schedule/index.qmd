@@ -1,27 +1,22 @@
 ---
 title: Set an R-based AWS Lambda function to run on a schedule
-author: 'teo'
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2023-02-26'
 execute:
   eval: false
-slug: set-an-r-based-aws-function-to-run-on-a-schedule
 categories:
   - AWS
   - R
-tags:
   - r2lambda
   - AWS Lambda
   - AWS EventBridge
   - AWS CloudWatch
   - cron
   - Tidytuesday
-subtitle: ''
-summary: 'A step-by-step tutorial on how to deploy an R-based AWS Lambda function, how to set it to run on a recurring schedule, how to validate that the execution happens on schedule, and how to clean up. All from the R console.'
-authors: [teo]
-lastmod: '2023-02-26T18:28:28-06:00'
-featured: no
+description: 'A step-by-step tutorial on how to deploy an R-based AWS Lambda function, how to set it to run on a recurring schedule, how to validate that the execution happens on schedule, and how to clean up. All from the R console.'
 projects: ['r2lambda']
-show_related: true
 ---
 
 A common use of the AWS Lambda service is to set a function to run on a 

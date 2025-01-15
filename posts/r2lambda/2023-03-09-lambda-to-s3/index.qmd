@@ -1,10 +1,11 @@
 ---
 title: 'How to set up an R-based AWS Lambda to write to AWS S3 on a schedule'
-author: 'teo'
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2023-03-09'
 execute:
   eval: false
-slug: lambda-to-s3
 categories:
   - AWS
   - R
@@ -13,13 +14,8 @@ categories:
   - AWS EventBridge
   - AWS S3
   - cron
-subtitle: 'Use AWS Lambda to save the Tidytuesday dataset to AWS S3 every Wednesday'
-summary: 'An introduction to working with AWS S3 from R and a step-by-step workflow to set an AWS Lambda functon to save datasets to an S3 bucket on a weekly schedule'
-authors: [teo]
-lastmod: '2023-03-09T10:22:06-06:00'
-featured: no
+description: 'An introduction to working with AWS S3 from R and a step-by-step workflow to set an AWS Lambda functon to save datasets to an S3 bucket on a weekly schedule'
 projects: ['r2lambda']
-show_related: true
 ---
 
 

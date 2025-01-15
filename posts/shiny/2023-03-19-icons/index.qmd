@@ -1,6 +1,8 @@
 ---
 title: How to use custom icons in Rmd reports and Shiny applications
-author: teo
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2023-03-19'
 execute:
   eval: false
@@ -11,13 +13,10 @@ categories:
   - icons
   - htmltools
   - HTML
-subtitle: ''
-summary: 'A workflow on how to create visually pleasing and effective static HTML visualizations of small-scale and heterogenous tabular data'
-authors: [teo]
-lastmod: '2023-03-19T10:56:26-06:00'
-featured: no
-projects: []
+description: 'A workflow on how to create visually pleasing and effective static HTML visualizations of small-scale and heterogenous tabular data'
 ---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 Creating custom HTML tables with icons can be a great way to display data. In some
 cases, like when we have a few, heterogeneous data points, it is better than 

@@ -1,21 +1,24 @@
 ---
-title: 'A {shiny} app to wrap BlasterJS and visualize NCBI blast results locally'
-authors: ['teo']
+title: 'A {shiny} app to wrap BlasterJS and visualize NCBI BLAST results locally'
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2022-06-23'
-slug: []
 categories:
   - Shiny
   - R
   - blasterjs
-  - ncbi
-  - blast
-images: []
+  - NCBI
+  - BLAST
 ---
-## `blast` and `BlasterJS`
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+## `BLAST` and `BlasterJS`
 
 I recently learned about a really slick `JavaScript` component for interactive visualization
-of NCBI's `blast` output. `BlasterJS` ([Website](http://sing-group.org/blasterjs/), [Paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0205286)) makes it 
-possible to visualize `blast` results in a way similar to the typical viz available on NCBI's 
+of NCBI's `BLAST` output. `BlasterJS` ([Website](http://sing-group.org/blasterjs/), [Paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0205286)) makes it 
+possible to visualize `BLAST` results in a way similar to the typical viz available on NCBI's 
 website. This is a fantastic resource, both in a day-to-day bioinformatics workflows, as well as
 for sharing results of genomics projects. For example, if we sequenced a novel genome and would 
 like our collaborators or the public to blast some sequences against our genome, we could show
@@ -27,7 +30,7 @@ Being an `R` programmer, and considering the wealth of `Bioconductor` resources 
 bioinformatics, I thought being able to run `BlasterJS` from `R` would be very useful. So
 I wrote a very small and simple `{golem}` application, called `{blastR}` to launch `BlasterJS` from `R`. One can
 install the `{blastR}` package locally and launch it when needed, or deploy an instance of `blastR` on
-their favorite `{shiny}` server platform to simply upload a `blast` output file.
+their favorite `{shiny}` server platform to simply upload a `BLAST` output file.
 
 With `{golem}`, the steps to make `BlasterJS` available in `shiny` are super easy:
 

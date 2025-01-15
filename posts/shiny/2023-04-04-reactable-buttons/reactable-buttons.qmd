@@ -1,22 +1,20 @@
 ---
 title: 'How to use buttons in a Reactable widget for navigation in a Shiny application'
-author: teo
+author:
+  - name: teo
+    url: "https://discindo.org/authors/teofil"
 date: '2023-04-04'
 execute:
   eval: false
-slug: reactable-buttons
 categories:
   - R
   - Shiny
   - bslib
   - reactable
-subtitle: ''
-summary: 'A few helpful design patterns for navigation in {shiny} applications using buttons in a {reactable} widget and '
-authors: [teo]
-lastmod: '2023-04-04T08:14:37-06:00'
-featured: no
-projects: []
+description: 'A few helpful design patterns for navigation in {shiny} applications using buttons in a {reactable} widget'
 ---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
 How to render and use buttons in tables is a relatively common task faced by `{shiny}` 
 developers. Commonly, buttons in tables are used for getting more details about a
