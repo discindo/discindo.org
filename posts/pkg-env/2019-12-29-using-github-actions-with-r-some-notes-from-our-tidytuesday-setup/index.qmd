@@ -13,6 +13,8 @@ categories:
   - Continuous integration
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 Beginning in September 2019 we started organizing a #TidyTuesday event 
 at the hacklab in Skopje - [KIKA](https://kika.spodeli.org/). It has 
 been 15 events in 2019, and it's been great. One of the things we wanted 

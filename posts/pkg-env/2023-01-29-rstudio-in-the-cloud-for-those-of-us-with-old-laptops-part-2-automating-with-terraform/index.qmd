@@ -14,6 +14,8 @@ categories:
 description: "In this post, we automate the process of setting up an RStudio server on AWS EC2 using Terraform. This guide covers the prerequisites, writing the Terraform configuration, and extending it to install R and RStudio server on the instance."
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 ## Setting the scene for automation
 
 In the previous post I wrote about how to [spin up a EC2 instance with Rstudio server](/post/rstudio-in-the-cloud-for-those-of-us-with-old-laptops), so some of the more computational heavy `R` processing can be moved on AWS infrastructure. 

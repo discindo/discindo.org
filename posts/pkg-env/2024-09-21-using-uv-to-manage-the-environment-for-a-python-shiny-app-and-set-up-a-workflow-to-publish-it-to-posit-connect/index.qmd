@@ -14,6 +14,8 @@ categories:
 description: 'A step-by-step guide to work with a Python Shiny app with the help of uv and a GitHub Actions workflow to have it published from GitHub to Posit Connect.'
 ---
 
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
 ## It all starts with a notification
 
 A couple of weeks ago, I got a notification from LinkedIn. Unlike the usual notifications, 
