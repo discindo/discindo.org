@@ -12,10 +12,10 @@ website:
   navbar:
     logo: "images/icon-transparent.png"
     right:
-      - projects.qmd
-      - series.qmd
-      - archive.qmd
-      - about.qmd
+      - static/projects.qmd
+      - static/series.qmd
+      - static/archive.qmd
+      - static/about.qmd
       - icon: house
         href: https://discindodata.com
       - icon: github
