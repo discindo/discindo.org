@@ -11,10 +11,10 @@ universe. We mostly focus on `R` and `Shiny` and how to build data solutions
 using these in the cloud. Other topics we cover include Py-shiny, 
 packages/environments/reproducibility and AWS for R/Shiny/Plumber/Lambda.
 
-Our [projects](/project.html) page has packages and tools we have developed 
+Our [projects](./projects.html) page has packages and tools we have developed 
 as `free software`.
 
-Our [series](/series.html) page has related posts grouped by topic.
+Our [series](./series.html) page has related posts grouped by topic.
 
 Our [website](https://discindodata.com) has description of previous projects 
 and references from our clients.
