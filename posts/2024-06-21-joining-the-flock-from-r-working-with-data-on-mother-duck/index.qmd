@@ -1,18 +1,15 @@
 ---
 title: 'Joining the flock from R: working with data on MotherDuck'
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2024-06-21'
-slug: joining-the-flock-from-r-working-with-data-on-motherduck
 categories:
   - R
   - duckdb
   - database
-subtitle: ''
-summary: 'Using R to connect to MotherDuck, the cloud data warehouse powered by DuckDB.'
-authors: [novica]
-lastmod: '2024-06-21T09:47:44+02:00'
-featured: no
-projects: []
+description: 'Using R to connect to MotherDuck, the cloud data warehouse powered by DuckDB.'
+image: "images/particles.png"
 ---
 
 With DuckDB [releasing](https://duckdb.org/2024/06/03/announcing-duckdb-100.html) 

@@ -1,24 +1,18 @@
 ---
 title: 'Using Wikidata to draw networks of Politically Exposed Persons #2'
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2022-11-17'
-slug: using-wikidata-to-draw-networks-of-politically-exposed-persons-2
 categories:
   - python
   - wikidata
-  - pep
-  - data
   - shiny
-subtitle: ''
-summary: ''
-authors: [novica]
-lastmod: '2022-11-17T21:41:55+01:00'
-featured: no
-projects: []
+description: "Building a PyShiny app for displaing data from Wikidata"
 ---
 
 
-In the [previous post](/post/using-wikidata-to-draw-networks-of-politically-exposed-persons-1) I outlined the approach to query data from Wikidata, 
+In the [previous post](/posts/using-wikidata-to-draw-networks-of-politically-exposed-persons-1) I outlined the approach to query data from Wikidata, 
 and wrangle your way to a result about some relationships between politically exposed 
 persons on the example of the rather poor data available for North Macedonia. 
 

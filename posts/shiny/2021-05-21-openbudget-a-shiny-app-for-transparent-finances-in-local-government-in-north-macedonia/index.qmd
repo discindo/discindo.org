@@ -1,16 +1,17 @@
 ---
 title: 'OpenBudget: A Shiny app for transparent finances in local government in North
   Macedonia'
-authors: ['teo']
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teo"
 date: '2021-05-21'
-slug: openbudget-a-shiny-app-for-transparent-finances-in-local-government-in-north-macedonia
 categories:
   - R
   - Shiny
   - Open data
-  - Metamorfosis Foundation
   - Hackathon
   - Finances
+description: 'OpenBudget: A Shiny app for transparent finances in local government in North Macedonia'
 ---
 
 This week we were excited to take part in (and [win](https://metamorphosis.org.mk/aktivnosti_arhiva/odrzhan-hakaton-za-otvoreni-podatoci/)!) an Open Data Hackathon organized by the [Metamorfosis Foundation](https://metamorphosis.org.mk/en/), a prominent NGO in North Macedonia whose mission and vision are to "... strengthen the awareness and capacity of citizens and civil society ...". The whole experience was very interesting, from the consultations with the organizers and advisers, to the presentations and the projects of the other participants. We were overall very proud to further contribute to the discussions about open data in North Macedonia. This is a topic that we have been practicing and advocating for a long time, and we are glad that such initiatives are (finally) getting continous funding for development and implementation.

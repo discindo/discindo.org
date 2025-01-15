@@ -1,19 +1,14 @@
 ---
 title: Python dashboards after Shiny for Python
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2022-12-03'
-slug: python-dashboards-after-shiny-for-python
 categories:
   - Python
-  - dash
-  - streamlit
-  - app
-subtitle: ''
-summary: ''
-authors: [novica]
-lastmod: '2022-12-03T14:19:48+01:00'
-featured: no
-projects: []
+  - Dash
+  - Streamlit
+description: "Exploring other dashboarding option in Python"
 ---
 
 

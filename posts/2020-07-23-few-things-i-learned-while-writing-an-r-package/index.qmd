@@ -1,13 +1,14 @@
 ---
 title: Few things I learned while writing an R package
-authors: ['novica']
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2020-07-23'
-slug: few-things-i-learned-while-writing-an-r-package
 categories:
   - R
   - package
   - newscatcheR
-images: []
+description: "On writing my first R package and publishing to CRAN."
 ---
 
 I wanted to learn to write an R package for some time, but I didn't have an idea what should the package do. Then I saw [newscatcher](https://github.com/kotartemiy/newscatcher) and decided to build an R clone, and [newscatcheR](https://github.com/discindo/newscatcheR/) was born. It's a nice little package that enables quick access to RSS feeds of news sites. These are some things I learned while building it.

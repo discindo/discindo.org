@@ -1,16 +1,17 @@
 ---
 title: Using {shiny.i18n} with {golem} for server-side translation
-authors: ['teo']
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teo"
 date: '2021-05-22'
-slug: using-shiny-i18n-with-golem-for-server-side-translation
 categories:
   - Shiny
   - R
   - golem
   - shiny.i18n
-  - internationalizations
-  - Metamorfosis Foundation
+  - internationalization
   - Hackathon
+description: using-shiny-i18n-with-golem-for-server-side-translation
 ---
 
 In this post we share a useful tidbit we learned while developing the demo for the [`OpenBudgetMKD`](discindo.shinyapps.io/OpenBudgetNMK/) application. 

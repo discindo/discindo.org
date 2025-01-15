@@ -1,13 +1,14 @@
 ---
 title: WindsoraiR package for accessing Windsor.ai API from R
-authors: ['novica']
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2021-04-21'
-slug: windsorair-package-for-accessing-windsorai-api-from-r
 categories:
   - R
   - package
   - windsorair
-images: []
+description: "Few notes on the package I wrote for Windsor.ai."
 ---
 
 I recently got acquainted with [Windsor.ai](https://windsor.ai) -- a hub for connecting various sources of marketing data like Facebook ads or Google Analytics. The platform is interesting because it provides ways to analyze and visualize your merged marketing data through template dashboards or to pipe the data to any number of tools (Python, R, Google data Studio, Tableau, etc). In collaboration with the people at Winsdor.ai, I developed a very simple package to interface with the [Windsor.ai API](https://www.windsor.ai/api-fields/).

@@ -1,18 +1,19 @@
 ---
 title: A simple workflow for async {shiny} with {callr}
-author: "teo"
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teo"
 date: "2024-01-12"
 execute:
   eval: false
-slug: an-opiniated-workflow-for-async-shiny-with-callr
-categories: [R, Shiny, async programming, callr, shiny module]
-tags: []
-subtitle: ""
-summary: "An approach to simplify and standardize async calls in `{shiny}` apps using `{callr}`"
-authors: [teo]
-lastmod: "2024-01-12T00:06:30-06:00"
-featured: yes
-projects: []
+categories: 
+  - R 
+  - Shiny
+  - async programming
+  - callr
+  - shiny module
+description: "An approach to simplify and standardize async calls in `{shiny}` apps using `{callr}`"
+
 ---
 
 In the `R/Shiny` community we are fortunate to have several approaches for async programming.

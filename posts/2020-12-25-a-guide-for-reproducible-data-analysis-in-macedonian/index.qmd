@@ -1,16 +1,16 @@
 ---
 title: A guide for reproducible data analysis in Macedonian
-authors: 'teo'
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teo"
 date: '2020-12-25'
-slug: []
 categories:
   - R
   - rskopje
   - Rmd
   - data analysis
   - reproducible
-  - workshop
-images: []
+description: "An overview of the document we produced for the reproducible data analysis workshop."
 ---
 
 

@@ -1,8 +1,9 @@
 ---
 title: Using {stevedore} to manage docker-based variant-calling pipelines from R
-author: teo
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teo"
 date: '2023-02-12'
-slug: using-stevedore-to-manage-docker-based-variant-calling-pipelines-from-r
 categories: 
   - R
   - Bioinformatics
@@ -10,13 +11,7 @@ categories:
   - Docker
   - gatk
   - deepVariant
-subtitle: ''
-summary: ''
-authors: [teo]
-lastmod: '2023-02-12T17:05:06-06:00'
-featured: no
-projects: []
-show_related: true
+description: "Docker and stevedore for overcoming usual obstacles in complicated pipelines."
 ---
 
 # Docker-based variant-calling pipelines

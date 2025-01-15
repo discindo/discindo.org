@@ -1,19 +1,15 @@
 ---
 title: 'Using Wikidata to draw networks of Politically Exposed Persons #1'
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2022-11-16'
 slug: using-wikidata-to-draw-networks-of-politically-exposed-persons-1
 categories:
   - python
   - wikidata
-  - pep
-  - data
-subtitle: ''
-summary: ''
-authors: [novica]
-lastmod: '2022-11-16T17:42:02+01:00'
-featured: no
-projects: []
+description: "Introduction on getting data from Wikidata using python"
+image: "images/plot.png"
 ---
 
 Some time ago I was doing a demo for querying Politically Exposed Persons from Wikidata. This 
@@ -26,7 +22,7 @@ this series).
 
 [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), the knowledge base maintained by 
 Wikimedia, has a `SPARQL` query service. `SPARQL` is kind of like `SQL`, but not really, and it 
-takes some time getting used to it. Fortunately, Wikidata maintains excelent 
+takes some time getting used to it. Fortunately, Wikidata maintains excellent 
 [documentation](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/A_gentle_introduction_to_the_Wikidata_Query_Service), 
 as well as a point and click [query builder](https://query.wikidata.org/) which is quite useful.
 
@@ -249,7 +245,7 @@ g = nx.from_pandas_edgelist(df_names_long, source = 'name', target = 'value')
 nx.draw_kamada_kawai(g, with_labels=True)
 ```
 
-![nx plot](/post/2022-11-16-using-wikidata-to-draw-networks-of-politically-exposed-persons-1/images/plot.png)
+![nx plot](images/plot.png)
 
 The graph doesn't look spectacular, but it show the possibilities of what can be achieved. 
 The few data points we had actually helped having a readable graph like this. Probably a 

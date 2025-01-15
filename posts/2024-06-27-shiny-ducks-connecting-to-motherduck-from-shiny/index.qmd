@@ -1,19 +1,15 @@
 ---
 title: 'Shiny ducks: connecting to MotherDuck from Shiny'
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2024-06-28'
-slug: shiny-ducks-connecting-to-motherduck-from-shiny
 categories:
   - R
   - shiny
   - duckdb
   - motherduck
-subtitle: ''
-summary: 'Few notes about getting up and running with Shiny and Mother duck'
-authors: [novica]
-lastmod: '2024-06-28T17:26:06+02:00'
-featured: no
-projects: []
+description: 'Few notes about getting up and running with Shiny and Mother duck'
 ---
 
 

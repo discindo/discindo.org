@@ -1,8 +1,9 @@
 ---
 title: Data wrangling tricks from the R4DS slack
-author: novica
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: '2023-03-27'
-slug: data-wrangling-tricks-from-the-r4ds-slack
 execute:
   eval: false
 categories:
@@ -10,15 +11,7 @@ categories:
   - r4ds
   - data analysis
   - shortcuts
-subtitle: ''
-summary: ''
-authors: [novica]
-lastmod: '2023-03-27T18:26:12+02:00'
-featured: no
-projects: []
-editor_options: 
-  markdown: 
-    wrap: 72
+description: "R4DS slack tips and tricks."
 ---
 
 Every now and then there is a question on the [R4DS

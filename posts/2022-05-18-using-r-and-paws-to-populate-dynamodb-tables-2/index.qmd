@@ -9,6 +9,7 @@ categories:
   - paws
   - AWS
   - dynamodb
+description: "How to start on using R with paws to work with AWS DynamoDB, part 2."
 ---
 
 

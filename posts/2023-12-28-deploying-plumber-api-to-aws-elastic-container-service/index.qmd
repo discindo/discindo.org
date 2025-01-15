@@ -1,19 +1,15 @@
 ---
 title: Deploying Plumber API to AWS Elastic Container Service
-author: "novica"
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
 date: "2023-12-28"
-slug: deploying-plumber-api-to-aws-elastic-container-service
 categories:
   - AWS
   - AWS ECR
   - plumber
-  - Connect
-subtitle: ""
-summary: "Notes on deploying Plumber API to AWS ECS."
-authors: [novica]
-lastmod: "2023-12-28T18:28:00+01:00"
-featured: no
-projects: []
+  - Posit Connect
+description: "Notes on deploying Plumber API to AWS ECS."
 ---
 
 ## Plumber API on ECS: Background
