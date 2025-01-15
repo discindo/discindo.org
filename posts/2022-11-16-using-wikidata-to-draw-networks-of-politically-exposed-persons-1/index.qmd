@@ -6,8 +6,8 @@ author:
 date: '2022-11-16'
 slug: using-wikidata-to-draw-networks-of-politically-exposed-persons-1
 categories:
-  - python
-  - wikidata
+  - Python
+  - Wikidata
 description: "Introduction on getting data from Wikidata using python"
 image: "images/plot.png"
 ---
