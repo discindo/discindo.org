@@ -62,7 +62,7 @@ section where add information specific to the different pages/tabs the applicati
 Some of the configurability comes in here. We can have separate pages for different 
 types of data or subscription levels and enable/disable pages from this section accordingly.
 
-```
+```{json}
 {
   "meta" : {
     "name" : "Shiny golem config",
@@ -155,7 +155,7 @@ intended to be reused. In the `{golem}` approach it is convenient that the
 module's functions are exported from the package and can be accessed with `getFunction`.
 Similar approaches would work for `{rhino}` and base shiny setups. 
 
-```
+```{r}
 app_ui <- function(request) {
   config <- jsonlite::read_json("https://raw.githubusercontent.com/discindo/shiny-golem-json-config/refs/heads/main/remote-data/app-config.json")
   pages <- purrr::map(
@@ -222,7 +222,7 @@ real application we might need multiple files and more involved server logic.
 If serverl data objects are needed, it might make sense to pass the paths to 
 these objects to the module's server rather than the data it self.
 
-```
+```{r}
 app_server <- function(input, output, session) {
   # Your application server logic
   config <- jsonlite::read_json("inst/app-config.json")
@@ -264,7 +264,8 @@ Like the `golem-config.yml` we can use the above approach to deploy a staging vs
 production app instances (i.e. by pointing them to staging vs production data buckets).
 
 The data bucket directory structure: 
-```
+
+```{shell}
 remote-data/
 ├── app-config.json
 ├── iris.csv
