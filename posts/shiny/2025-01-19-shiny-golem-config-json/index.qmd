@@ -10,6 +10,7 @@ categories: [R, Shiny, JSON, shiny module, configuration]
 description: >
   A straighforward way to configure the appearence and content of a Shiny 
   application using a (remote) JSON configuration file
+image: "images/logos.png"
 ---
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
