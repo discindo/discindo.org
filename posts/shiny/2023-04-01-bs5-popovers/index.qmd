@@ -6,6 +6,7 @@ author:
 date: '2023-04-01'
 categories: [R, Shiny, bslib, Bootstrap 5, popover, tooltip, popper.js]
 description: 'A few tips on using bootstrap 5 popovers in Shiny'
+image: "images/screengrab2.png"
 ---
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
@@ -200,7 +201,7 @@ htmltools::div(
     )
 )
 ```
-![Shiny inputs with icons for popover](/post/2023-04-01-bs5-popovers/screengrab1.png)
+![Shiny inputs with icons for popover](images/screengrab1.png)
 
 Our `titleWithPopover` function can easily be applied in other contexts too.
 For example, we can create a tabset panel with tabs whose names are embelished with
@@ -224,7 +225,7 @@ bslib::navs_pill_list(
 )
 ```
 
-![Nav item titles with icons for popover](/post/2023-04-01-bs5-popovers/screengrab2.png)
+![Nav item titles with icons for popover](images/screengrab2.png)
 
 # Summary
 

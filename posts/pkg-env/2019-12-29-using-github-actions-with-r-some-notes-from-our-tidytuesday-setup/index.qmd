@@ -8,9 +8,9 @@ description: 'Notes on using GitHub Actions with R for our #TidyTuesday setup, i
 categories:
   - R
   - Git
-  - GitHub actions
+  - GitHub Actions
   - Rmd
-  - Continuous integration
+  - CI/CD
 ---
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)

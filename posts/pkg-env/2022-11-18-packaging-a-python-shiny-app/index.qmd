@@ -7,8 +7,7 @@ date: '2022-11-18'
 description: "A step-by-step guide on how to package a Python Shiny app, including directory structure, necessary files, and commands to build and run the package."
 categories:
   - Python
-  - shiny
-  - package
+  - Shiny
   - golem
 ---
 

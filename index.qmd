@@ -11,6 +11,7 @@ listing:
   feed: 
     categories: 
       - R
+      - Python
 fields: [date, title, reading-time, description]
 page-layout: full
 title-block-banner: true

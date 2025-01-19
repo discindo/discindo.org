@@ -5,9 +5,9 @@ author:
     url: "https://discindo.org/authors/novica"
 date: '2022-11-17'
 categories:
-  - python
-  - wikidata
-  - shiny
+  - Python
+  - Wikidata
+  - Shiny
 description: "Building a PyShiny app for displaing data from Wikidata"
 ---
 

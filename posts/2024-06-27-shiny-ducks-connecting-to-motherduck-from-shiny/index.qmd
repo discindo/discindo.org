@@ -6,7 +6,7 @@ author:
 date: '2024-06-28'
 categories:
   - R
-  - shiny
+  - Shiny
   - duckdb
   - motherduck
 description: 'Few notes about getting up and running with Shiny and Mother duck'
