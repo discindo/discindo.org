@@ -21,7 +21,7 @@ new client with a new logo and color scheme?". There are of course many ways
 to approach configuration questions like these. One way is to implement 
 server logic tied to some data about the client that logged in, keeping all the
 configuration logic in one codebase and have one deployed instance. Another way
-is to simply copy the code, make modifications to accomodate the differences in 
+is to simply copy the code, make modifications to accommodate the differences in 
 the UI and required data and deploy twice. Either approach, and the myriad 
 in-between solutions, have their merits and drawbacks (complexity of code, 
 maintainability, scalability, budget, etc.). Below I write about an approach that 
@@ -36,7 +36,7 @@ all types of data. Or in a subscription setting, one could say not all users
 have the subscription for each unit. 
 
 Furthermore, lets assume that 
-there is some substantive data processing that ocurrs before the data arrives 
+there is some substantive data processing that occurrs before the data arrives 
 to our Shiny application. For example, an analyst, you are performing 
 some extensive machine learning procedure for different clients, resulting 
 in charts and tables that need to be displayed in the Shiny application. The 
@@ -137,7 +137,7 @@ twice, as its quite small.
 
 In the `{rhino}` framework, something similar can be achieved by loading the config in
 `app.R`, and then using it in functions from `/logic/`. And in a "base" Shiny app, 
-a straighforward approach would be to parse the config in `global.r` which would make
+a straightforward approach would be to parse the config in `global.r` which would make
 the variable available in the scope of the ui and server functions. 
 
 #### UI
@@ -146,8 +146,8 @@ In the ui function we:
 
   - load the config, 
   - generate the pages UIs using `nav_panel` from `bslib`,
-  - generate some basic apects of the UI (brand, titile, substitle),
-  - and finally `splice` in the pages/taba 
+  - generate some basic aspects of the UI (brand, title, subtitle),
+  - and finally `splice` in the pages/tabs 
 
 To generate the content of the pages, we use either HTML Templates or Shiny modules. 
 Of course this is not necessary, we can use R to write the HTML for the Home and
@@ -214,13 +214,13 @@ app_ui <- function(request) {
 
 In this example, the server is even simpler. All we need to do here is cycle over 
 the `$pages` slot of the config, find the pages that have a `server` slot, and
-call the module server (obviously using the same `id` as in the ui). The 
-is passed to the module server as an argument, although tihs is not strictly 
+call the module server (obviously using the same `id` as in the ui). The data
+is passed to the module server as an argument, although this is not strictly 
 required, as we can use `session$userData` to share the object across modules, 
 or use some other mechanism. Again, in this simple example, there is only one
 data object, and we don't do much with it apart to render a table. But in a 
 real application we might need multiple files and more involved server logic. 
-If serverl data objects are needed, it might make sense to pass the paths to 
+If many server data objects are needed, it might make sense to pass the paths to 
 these objects to the module's server rather than the data it self.
 
 ```{r}
