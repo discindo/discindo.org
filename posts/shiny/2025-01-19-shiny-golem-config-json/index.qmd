@@ -29,7 +29,8 @@ is somewhere in the middle that I used recently to provide flexibility for a
 client without major refactoring of the code, while maintaining a single code 
 repository. Keeping it relatively simple, in other words.
 
-In this example, we assume that there are predefined units of code (modules)
+In [this example](https://github.com/discindo/shiny-golem-json-config), we assume 
+that there are predefined units of code (modules)
 that process different datasets and display results. The code can accommodate
 several different dataset types, but not all users have or need to access
 all types of data. Or in a subscription setting, one could say not all users
