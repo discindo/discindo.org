@@ -72,13 +72,13 @@ So, now, after a few months, I came back to this problem and I think I have a mi
 improvement. In the next few examples I outline step-by-step how one can simplify,
 or at least reduce repetitiveness of page-level caching in `{brochure}` applications. 
 
+### Prep code
+
 In all code below I use these options and load the following packages. The options
 set the browser and instruct `{shiny}` to run the application externally, as 
 browser button navigation does not make sense in a viewer pane. Moreover, before
 each example, we clear the local disk cache and re-initialize it. This ensures that
 the new examples are not pulling values stored in a previous' examples cache.
-
-### Prep code
 
 ```{r}
 options(browser = "/usr/bin/firefox")
@@ -171,7 +171,6 @@ unnecessary workload to the session. It becomes cumbersome quickly, and the
 code gets long and potentially complex, for a relatively basic operation. 
 
 ```{r}
-
 brochureApp(
   # First page
   page(
@@ -312,7 +311,7 @@ brochureApp(
 )
 ```
 
-### Still to cumbersome? Cache the kitchen sink
+### Still too cumbersome? Cache the kitchen sink
 
 Finally, we can take this a step further, perhaps unwisely, and store
 the entire environment. Within `onSessionEnded`, we define a callback
