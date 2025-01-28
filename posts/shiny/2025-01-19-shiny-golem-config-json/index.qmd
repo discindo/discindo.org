@@ -8,7 +8,7 @@ execute:
 date: '2025-01-19'
 categories: [R, Shiny, JSON, shiny module, configuration]
 description: >
-  A straighforward way to configure the appearence and content of a Shiny 
+  A straightforward way to configure the appearance and content of a Shiny 
   application using a (remote) JSON configuration file
 image: "images/logos.png"
 ---
@@ -22,21 +22,22 @@ to approach configuration questions like these. One way is to implement
 server logic tied to some data about the client that logged in, keeping all the
 configuration logic in one codebase and have one deployed instance. Another way
 is to simply copy the code, make modifications to accommodate the differences in 
-the UI and required data and deploy twice. Either approach, and the myriad 
+the UI and required data, and deploy twice. Either approach, and the myriad 
 in-between solutions, have their merits and drawbacks (complexity of code, 
-maintainability, scalability, budget, etc.). Below I write about an approach that 
+maintainability, scalability, budget, etc.). Below.,I write about an approach that 
 is somewhere in the middle that I used recently to provide flexibility for a 
 client without major refactoring of the code, while maintaining a single code 
 repository. Keeping it relatively simple, in other words.
 
-In this example, we assume that there are predefined units of code (modules)
+In [this example](https://github.com/discindo/shiny-golem-json-config), we assume 
+that there are predefined units of code (modules)
 that process different datasets and display results. The code can accommodate
 several different dataset types, but not all users have or need to access
 all types of data. Or in a subscription setting, one could say not all users
 have the subscription for each unit. 
 
-Furthermore, lets assume that 
-there is some substantive data processing that occurrs before the data arrives 
+Furthermore, let's assume that 
+there is some substantive data processing that occurs before the data arrives 
 to our Shiny application. For example, an analyst, you are performing 
 some extensive machine learning procedure for different clients, resulting 
 in charts and tables that need to be displayed in the Shiny application. The 
@@ -56,9 +57,9 @@ versions for the same client.
 Nothing particularly novel here. We just create a JSON file with a simple structure.
 The "meta" section has general info about the application and the client (logo, homepage, etc.).
 The "general" section contains info on the title of the particular app instance, and 
-path to the data object. Depending on the needs this can be a folder (bucket) with several
+path to the data object. Depending on the needs, this can be a folder (bucket) with several
 files, or a single file (like in the simple example here). Finally, we have the "pages"
-section where add information specific to the different pages/tabs the application has.
+section, where add information specific to the different pages/tabs the application has.
 
 Some of the configurability comes in here. We can have separate pages for different 
 types of data or subscription levels and enable/disable pages from this section accordingly.
@@ -114,14 +115,14 @@ types of data or subscription levels and enable/disable pages from this section 
 
 The config can be placed in the `inst` folder of the R package (if `{golem}`) or
 some other folder that is in the resource path of the Shiny app. But it can also
-live in the remote cloud location. Of course the Shiny app should have the required
+live in the remote cloud location. Of course, the Shiny app should have the required
 permissions to access these files.
 
 In the example here, to keep things simple, the 'remote-data' folder is a public 
 folder in the GitHub repository for the code used in this post. No additional files
 or variables are needed to access the config JSON and the data files. But if the data
 are in a private bucket at a cloud provider, the app would need to have read permissions
-for that bucket. Either through AWS IAM credentials, or Google cloud token, etc..
+for that bucket. Either through AWS IAM credentials, or Google cloud token, etc.
 
 ### Shiny code 
 
@@ -130,19 +131,19 @@ and use the configurations set by the user to generate the right content. In the
 I am using the `{golem}` setup, so there are separate `app_ui.r` and `app_server.r` scripts.
 Each one loads the JSON config using `jsonlite` and accesses the slots in the resulting
 list for the values it needs. If there are some expensive or repeated steps performed
-in the ui and server functions, we could use golem options or some other mechanism to 
+in the UI and server functions, we could use golem options or some other mechanism to 
 parse the config JSON only once and pass the list as an argument or option to the main
-ui and server functions. But it this, admittedly simplified example, we parse the config
-twice, as its quite small. 
+UI and server functions. But in this, admittedly simplified example, we parse the config
+twice, as it is quite small. 
 
 In the `{rhino}` framework, something similar can be achieved by loading the config in
 `app.R`, and then using it in functions from `/logic/`. And in a "base" Shiny app, 
 a straightforward approach would be to parse the config in `global.r` which would make
-the variable available in the scope of the ui and server functions. 
+the variable available in the scope of the UI and server functions. 
 
 #### UI
 
-In the ui function we:  
+In the UI function, we:  
 
   - load the config, 
   - generate the pages UIs using `nav_panel` from `bslib`,
@@ -152,7 +153,7 @@ In the ui function we:
 To generate the content of the pages, we use either HTML Templates or Shiny modules. 
 Of course this is not necessary, we can use R to write the HTML for the Home and
 About pages, or can make modules for all the pages, even if those modules are not
-intended to be reused. In the `{golem}` approach it is convenient that the 
+intended to be reused. In the `{golem}` approach, it is convenient that the 
 module's functions are exported from the package and can be accessed with `getFunction`.
 Similar approaches would work for `{rhino}` and base shiny setups. 
 
@@ -214,12 +215,12 @@ app_ui <- function(request) {
 
 In this example, the server is even simpler. All we need to do here is cycle over 
 the `$pages` slot of the config, find the pages that have a `server` slot, and
-call the module server (obviously using the same `id` as in the ui). The data
+call the module server (obviously using the same `id` as in the UI). The data
 is passed to the module server as an argument, although this is not strictly 
 required, as we can use `session$userData` to share the object across modules, 
 or use some other mechanism. Again, in this simple example, there is only one
 data object, and we don't do much with it apart to render a table. But in a 
-real application we might need multiple files and more involved server logic. 
+real application, we might need multiple files and more involved server logic. 
 If many server data objects are needed, it might make sense to pass the paths to 
 these objects to the module's server rather than the data it self.
 
@@ -247,7 +248,7 @@ complexity at a lower level.
 
 The configurability in this simple example comes from the `$general$data_path` 
 entry in the config. We can toggle between `iris` and `mtcars`. What other ways
-can this config json be used to customize the shiny app:
+can this config JSON be used to customize the shiny app:
 
 - have multiple 'data' pages, with different datasets or outputs
 - use different data processing modules
@@ -260,7 +261,7 @@ per page (module) level. For example to load csv data in one page and a map in
 another.
 
 Using this approach is very similar in to using `{golem}`'s `golem-config.yml`, 
-with the main difference that the the location of the config JSON can be anywhere.
+with the main difference that the location of the config JSON can be anywhere.
 Like the `golem-config.yml` we can use the above approach to deploy a staging vs
 production app instances (i.e. by pointing them to staging vs production data buckets).
 
@@ -273,7 +274,7 @@ remote-data/
 └── mtcars.csv
 ```
 
-Of course, each data bucket, with its own config and data objects should in this case
+Of course, each data bucket, with its own config and data objects, should in this case
 correspond to a deployed instance of the application. In the event of multiple clients,
 this makes sense, but it would obviously backfire after 5-10 clients. Maintaining that
 many data buckets and instances would be best approached with a database.  
