@@ -403,7 +403,7 @@ potentially save time.
 In this post, we explored various methods for sharing data between pages in a 
 multi-page `{brochure}` `{shiny}` application. We started with a basic example 
 demonstrating the isolation of sessions in `{brochure}` and the need for caching 
-to share data. We then showed how to use `cachem` to store and retrieve variables 
+to share data. We then showed how to use `{cachem}` to store and retrieve variables 
 between pages. To simplify the process, we introduced the use of `onSessionEnded` 
 to cache variables at the end of a session. Finally, we discussed caching the 
 entire environment and the potential pitfalls of this approach. These methods 
