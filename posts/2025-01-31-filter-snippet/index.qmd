@@ -1,0 +1,239 @@
+---
+title: How to dynamically filter any dataset in R with `purrr` and `dplyr`
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teo"
+date: '2025-01-31'
+categories:
+  - R
+  - filter
+  - dynamic
+  - purrr
+  - dplyr
+description: "Demo of an approach I use for dynamic filtering of tables (in Shiny)"
+execute:
+  eval: false
+image: "images/image.png"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+```{r, eval = TRUE, echo = FALSE}
+#' Filter a dataset
+#' @param .data the data frame
+#' @param .arglist a list of filter specifications
+#' @examples
+#' d <- iris
+#' l <- list(
+#'   list(col = "Sepal.Length", fun = "between", min = 4, max = 5),
+#'   list(col = "Species", fun = "in", val = c("setosa", "versicolor"))
+#' )
+#' .filter(d, l)
+#' @import checkmate
+#' @import purrr
+#' @import dplyr
+#' @export
+.filter <- function(.data, .arglist) {
+  checkmate::assert_data_frame(.data)
+  checkmate::assert_list(.arglist, types = "list")
+  checkmate::assert_subset(
+    purrr::map_chr(.arglist, purrr::pluck, "col"),
+    choices = names(.data)
+  )
+  checkmate::assert_subset(
+    purrr::map_chr(.arglist, purrr::pluck, "fun"),
+    choices = c("in", "between")
+  )
+
+  purrr::map(.arglist, function(x) {
+    col <- x$col
+    fun <- x$fun
+    if (fun == "between") {
+      min <- x$min
+      max <- x$max
+      if (is.null(min) || is.null(max)) {
+        return(.data)
+      }
+      return(
+        dplyr::filter(.data, dplyr::between(
+          !!rlang::sym(col), min, max
+        ))
+      )
+    }
+    if (fun == "in") {
+      val <- x$val
+      if (is.null(val)) {
+        return(.data)
+      }
+      return(dplyr::filter(.data, `%in%`(
+        as.character(!!rlang::sym(col)), val
+      )))
+    }
+  }) |> purrr::reduce(dplyr::intersect)
+}
+```
+
+
+### Interactive and dynamic filtering
+
+The `{tidyverse}`, and `{dplyr}` in particular, have made data manipulation in `R` a 
+breeze. In an interactive setting, the pattern:
+
+```{r}
+my_data |> 
+    dplyr::filter(my_col == my_value) |>
+    ...
+```
+
+gives a lot of power and joy to everyone, including beginner programmers. 
+
+However, we often run into hurdles when trying to translate our 
+script written for interactive analysis into code that can be run 
+automatically. Where we won't know ahead of time what column to filter 
+on, or what values we should retain. 
+
+In such cases, we often write `if` statements, along the lines of:
+
+```{r}
+if (x == "my_col1") {
+    dplyr::filter(my_col1 == my_val1)
+} else if (x == my_col2) {
+    dplyr::filter(my_col2 == my_val2)
+} ...
+```
+
+Its easy to see how such approaches become long-winded, error prone, slow, 
+and result in untidy, less extensible and maintainable code. 
+
+This is common, for example if you have a `{plumber}` API and an arbitrary
+user attempts to filter an arbitrary table in a data base. Or if you have
+a `{shiny}` application where the user uploads a table, with columns unknown
+to the code and then select one or more of them to filter on.
+
+I have faced this many times, and have always wanted a solution where I can send 
+instructions for filtering in the form of a named list, and get the filtered table.
+For this to work, the named list would need specify the column, filtering function, 
+and values to retain (min, max, val). Then a function would take each element of the
+list, filter the dataset based on it, and finally return a table that combines all
+the filters. Or, more accurately, return the _intersect_ of the filtered datasets.
+
+Below is a function that solves this problem that I developed recently to add flexible 
+dynamic filtering to a `{shiny}` application where the user can upload an arbitrary
+dataset, then select arbitrary filter columns and values and obtain the joint filtered
+result. 
+
+To find the `iris` flowers with sepal length between 4.9 and 5 and from species _setosa_
+and _versicolor_, we would write the following:
+
+```{r, eval = TRUE}
+suppressPackageStartupMessages({
+    library(checkmate)
+    library(dplyr)
+    library(purrr)
+})
+l <- list(
+  list(col = "Sepal.Length", fun = "between", min = 4.9, max = 5),
+  list(col = "Species", fun = "in", val = c("setosa", "versicolor"))
+)
+.filter(iris, l)
+```
+
+### How does it work
+
+The function below has two sections. First we do input validation using `{checkmate}`.
+In a non-interactive setting, we can't rely on the inputs being always correct, so 
+validating, and returning meaningful errors is essential. For this job, I prefer 
+`checkmate` because it has a nice and consistent interface with many 
+built-in checking, asserting, and testing functions, but any other approach, including
+base `R`'s `stopifnot` or `assertthat` would work.
+
+The second part is the filtering bit, where we have `purrr::map` cycle over each element
+of the filter list, grab the required filter function and go into one of two paths. If
+the column is numeric (date, datetime, integer, double), we use `dplyr::between` to 
+filter. If, the column is character (string), factor or logical, we go with `%in%`.
+
+After cycling over all elements of the filter list, the output would be a list of 
+filtered datasets. We must now combine these into a single table, i.e. the table that
+we would get if we applied all these filters in one call, or sequentially. To do this,
+we use a bit more functional programming magic with `purrr::reduce` with the `intersect`
+function from `dplyr`. This final step, reduces the list of data frames to a single table
+containing only the rows that are shared between the data frames.
+
+```{r}
+#' Filter a dataset
+#' @param .data the data frame
+#' @param .arglist a list of filter specifications
+#' @examples
+#' d <- iris
+#' l <- list(
+#'   list(col = "Sepal.Length", fun = "between", min = 4, max = 5),
+#'   list(col = "Species", fun = "in", val = c("setosa", "versicolor"))
+#' )
+#' .filter(d, l)
+#' @import checkmate
+#' @import purrr
+#' @import dplyr
+#' @export
+.filter <- function(.data, .arglist) {
+  checkmate::assert_data_frame(.data)
+  checkmate::assert_list(.arglist, types = "list")
+  checkmate::assert_subset(
+    purrr::map_chr(.arglist, purrr::pluck, "col"),
+    choices = names(.data)
+  )
+  checkmate::assert_subset(
+    purrr::map_chr(.arglist, purrr::pluck, "fun"),
+    choices = c("in", "between")
+  )
+
+  purrr::map(.arglist, function(x) {
+    col <- x$col
+    fun <- x$fun
+    if (fun == "between") {
+      min <- x$min
+      max <- x$max
+      if (is.null(min) || is.null(max)) {
+        return(.data)
+      }
+      return(
+        dplyr::filter(.data, dplyr::between(
+          !!rlang::sym(col), min, max
+        ))
+      )
+    }
+    if (fun == "in") {
+      val <- x$val
+      if (is.null(val)) {
+        return(.data)
+      }
+      return(dplyr::filter(.data, `%in%`(
+        as.character(!!rlang::sym(col)), val
+      )))
+    }
+  }) |> purrr::reduce(dplyr::intersect)
+}
+```
+
+To show another example, filter cars with mpg between 15 and 20 and cyl in 4 or 6
+
+```{r, eval = TRUE}
+l <- list(
+    list(col = "mpg", fun = "between", min = 15, max = 20),
+    list(col = "cyl", fun = "in", val = c(4, 6))
+)
+.filter(mtcars, l)
+```
+
+Pretty neat. In future posts, I'll show how I use this in `{shiny}` context,
+where the construction of the filter list should also be automated.
+
+
+### Summary
+In this post, we explored a method to dynamically filter datasets in R using 
+`purrr` and `dplyr`. We discussed the limitations of traditional filtering 
+approaches and introduced a flexible function that accepts a list of filter 
+specifications. This function validates inputs using `checkmate` and applies 
+the filters using `purrr` and `dplyr`. We demonstrated its usage with examples 
+on the `iris` and `mtcars` datasets. This approach is particularly useful in 
+interactive applications like `shiny`, where users can upload arbitrary datasets 
+and apply custom filters dynamically.
