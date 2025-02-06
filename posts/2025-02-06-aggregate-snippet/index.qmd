@@ -1,0 +1,279 @@
+---
+title: How to dynamically aggregate any dataset in R with `purrr` and `dplyr`
+author: 
+  - name: teo
+    url: "https://discindo.org/authors/teo"
+date: '2025-02-06'
+categories:
+  - R
+  - aggregate
+  - dynamic
+  - purrr
+  - dplyr
+description: "Demo of an approach I use for dynamic aggregating of tables (in Shiny)"
+execute:
+  eval: false
+image: "images/image.png"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+```{r, eval = TRUE, echo = FALSE}
+#' Aggregate a dataset
+#' @param .data the data frame
+#' @param .arglist a list of column names to group by
+#' @examples
+#' d <- iris
+#' l <- list(
+#'   groups = list(col = "Species"),
+#'   aggregates = list(
+#'     list(col = "Sepal.Length", fun = "mean"),
+#'     list(col = "Sepal.Width", fun = "mean")
+#'   )
+#' )
+#' .aggregate(d, l)
+#' @return a data frame with the columns aggregated
+#' @export
+.aggregate <- function(.data, .arglist) {
+  checkmate::assert_data_frame(.data)
+  checkmate::assert_list(.arglist, types = "list")
+  checkmate::assert_named(.arglist)
+  checkmate::assert_subset(
+    names(.arglist),
+    choices = c("groups", "aggregates")
+  )
+  checkmate::assert_list(.arglist$groups, len = 1)
+  checkmate::assert_subset(
+    purrr::pluck(.arglist, "groups", "col"),
+    choices = names(.data)
+  )
+  checkmate::assert_subset(
+    purrr::pluck(.arglist, "aggregates", "col"),
+    choices = names(.data)
+  )
+  checkmate::assert_subset(
+    purrr::pluck(.arglist, "aggregates", "fun"),
+    choices = c(
+      "mean", "median", "sum", "min", "max", "sd", "var", "count"
+    )
+  )
+
+  .get_aggr_fun <- function(x) {
+    switch(x,
+      "mean" = mean,
+      "median" = stats::median,
+      "sum" = sum,
+      "min" = min,
+      "max" = max,
+      "sd" = sd,
+      "var" = var,
+      "count" = length
+    )
+  }
+
+  aggr_dataset <- purrr::map(
+    .arglist$aggregates,
+    .f = ~ dplyr::summarise(
+      .data,
+      !!paste(.x$col, .x$fun, sep = "_") :=
+        .get_aggr_fun(.x$fun)(!!rlang::sym(.x$col)),
+      .by = .arglist$groups$col
+    )
+  ) |>
+    purrr::reduce(dplyr::left_join) |>
+    dplyr::mutate_if(is.numeric, round, 2)
+
+  aggr_dataset
+}
+```
+
+This post continues what I started last time, when I described an approach
+for dynamic filtering of data frame in `R`. The motivation and approach are 
+very similar. In short, we want to have a function that takes a list with
+instructions about how to aggregate a data frame. This is desirable in 
+non-interactive or automated workflows as in these cases we usually don't 
+know what the user might request. Creating an flexible interface, where
+one can send a JSON with aggregation instructions therefore can be very 
+helpful for various `{shiny}` and `{plumber}` tasks.
+
+### Dynamic aggregation
+
+As with the dynamic filter, we want something of the form:
+
+```{r, eval = FALSE}
+.aggregate(my_data, my_list_of_instructions)
+```
+
+For aggregation to work, we need to specify at least one grouping variable,
+and then the names and aggregation functions for the columns we would like
+to summarize. So the instructions list should have the form:
+
+```{r, eval = FALSE}
+aggr_list <- list(
+    groups = list(col = "group_var"),
+    aggregates = list(
+        list(col = "column 1", fun = "mean"),
+        list(col = "column 2", fun = "sd"),
+        ...
+    )
+)
+```
+
+To show an example, we could get the mean, median, and standard deviation of
+Sepal Length in species from the `iris` dataset:
+
+```{r, eval = TRUE}
+d <- iris
+l <- list(
+  groups = list(col = "Species"),
+  aggregates = list(
+    list(col = "Sepal.Length", fun = "mean"),
+    list(col = "Sepal.Length", fun = "median"),
+    list(col = "Sepal.Length", fun = "sd")
+  )
+)
+.aggregate(d, l)
+```
+
+As we can tell, we in the `aggregates list`, we can specify the same column 
+multiple times, and the resulting table will only contain the columns for
+which we've specified an aggregation.
+
+A more complex example would be to group on more than variable and summarize
+multiple columns. For example, group by cylinder, gear and carburetor and 
+find the mean of miles per gallon, the total horse power and the median weight
+of cars in the `mtcars` dataset:
+
+```{r, eval = TRUE}
+d <- mtcars
+l <- list(
+  groups = list(col = c("cyl", "gear", "carb")),
+  aggregates = list(
+    list(col = "mpg", fun = "mean"),
+    list(col = "hp", fun = "sum"),
+    list(col = "wt", fun = "median")
+  )
+)
+.aggregate(d, l)
+```
+
+Neat. Again, the motivation here is not to replace the sweet `{dplyr}` syntax, 
+rather to come up with a mechanism to do complex aggregation in one step, 
+by creating an instructions list (or JSON) which, again, in `{shiny}` or `{plumber}`
+context would most likely be constructed programmatically.
+
+### How does it work?
+
+Similar to our filtering function, we have two sections. First is input validation,
+again using `{checkmate}` because its awesome. We can make sure that the inputs 
+are of correct type, that they are named, and that the columns specified as grouping
+and aggregation variables are present in the dataset. Likewise, we ensure that the 
+requested aggregation functions are supported. 
+
+In the second section, we first convert the string passed to `fun` to a function, 
+so it can be used downstream in `dplyr::summarize`. We do this with a helper 
+function that can be called at the time `summarize` executes. 
+
+Then, we loop over the contents of the `aggregates` sub-list and apply each aggregation
+independently resulting in a list of aggregated datasets. For example, if we specified
+the mean, median, and sd for Sepal Length by Species, at this stage we would have a list
+of three data frames with the grouping column and another column representing the aggregate.
+
+Finally, to collate the tables we use `reduce` with `left_join`, essentially joining the
+three data frames by species. 
+
+Note the nice argument `.by` for `dplyr::summarize`. In this case we just send the string
+from the `groups$col` slot in our instructions list. i.e we don't need to use `dplyr::group_by`
+and the NSE construct it would require (converting it to symbol, and `!!` it). 
+
+```{r, eval = FALSE, echo = TRUE}
+#' Aggregate a dataset
+#' @param .data the data frame
+#' @param .arglist a list of column names to group by
+#' @examples
+#' d <- iris
+#' l <- list(
+#'   groups = list(col = "Species"),
+#'   aggregates = list(
+#'     list(col = "Sepal.Length", fun = "mean"),
+#'     list(col = "Sepal.Width", fun = "mean")
+#'   )
+#' )
+#' .aggregate(d, l)
+#' @return a data frame with the columns aggregated
+#' @export
+.aggregate <- function(.data, .arglist) {
+  checkmate::assert_data_frame(.data)
+  checkmate::assert_list(.arglist, types = "list")
+  checkmate::assert_named(.arglist)
+  checkmate::assert_subset(
+    names(.arglist),
+    choices = c("groups", "aggregates")
+  )
+  checkmate::assert_list(.arglist$groups, len = 1)
+  checkmate::assert_subset(
+    purrr::pluck(.arglist, "groups", "col"),
+    choices = names(.data)
+  )
+  checkmate::assert_subset(
+    purrr::pluck(.arglist, "aggregates", "col"),
+    choices = names(.data)
+  )
+  checkmate::assert_subset(
+    purrr::pluck(.arglist, "aggregates", "fun"),
+    choices = c(
+      "mean", "median", "sum", "min", "max", "sd", "var", "count"
+    )
+  )
+
+  .get_aggr_fun <- function(x) {
+    switch(x,
+      "mean" = mean,
+      "median" = stats::median,
+      "sum" = sum,
+      "min" = min,
+      "max" = max,
+      "sd" = sd,
+      "var" = var,
+      "count" = length
+    )
+  }
+
+  aggr_dataset <- purrr::map(
+    .arglist$aggregates,
+    .f = ~ dplyr::summarise(
+      .data,
+      !!paste(.x$col, .x$fun, sep = "_") :=
+        .get_aggr_fun(.x$fun)(!!rlang::sym(.x$col)),
+      .by = .arglist$groups$col
+    )
+  ) |>
+    purrr::reduce(dplyr::left_join) |>
+    dplyr::mutate_if(is.numeric, round, 2)
+
+  aggr_dataset
+}
+```
+
+In a `{shiny}` application, where we want to enable the user to select any column(s)
+to aggregate with some choices for aggregating function, it would require quite a bit
+of `if/else` logic to capture all the cases manually. Using this alternative, we simply
+harvest the user's selections from the input and construc the list of instructions before
+plugging it into `.aggregate` to obtain our results.
+
+### Summary
+
+In this post, we explored a method for dynamically aggregating datasets in R using `purrr` 
+and `dplyr`. We created a function `.aggregate` that takes a data frame and a list of 
+instructions specifying the grouping variables and the aggregation functions to apply. This 
+approach is particularly useful in non-interactive or automated workflows, such as in `{shiny}` 
+applications or `{plumber}` APIS, where the user might specify different aggregation requirements.
+
+We demonstrated the usage of the `.aggregate` function with examples using the `iris` and 
+`mtcars` datasets, showing how to group by one or more variables and apply various aggregation 
+functions. The function ensures input validation using `{checkmate}` and dynamically applies 
+the specified aggregation functions, collating the results into a single data frame.
+
+This method provides a flexible and efficient way to perform complex aggregations 
+programmatically, reducing the need for extensive `if/else` logic and making it easier to 
+handle user-defined aggregation instructions.

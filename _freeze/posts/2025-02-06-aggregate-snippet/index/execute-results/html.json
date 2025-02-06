@@ -1,0 +1,15 @@
+{
+  "hash": "b85891031875ec37370678f58932a54d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: How to dynamically aggregate any dataset in R with `purrr` and `dplyr`\nauthor: \n  - name: teo\n    url: \"https://discindo.org/authors/teo\"\ndate: '2025-02-06'\ncategories:\n  - R\n  - aggregate\n  - dynamic\n  - purrr\n  - dplyr\ndescription: \"Demo of an approach I use for dynamic filtering of tables (in Shiny)\"\nexecute:\n  eval: false\nimage: \"images/image.png\"\n---\n\n\n\n\n[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)\n\n\n\n\n::: {.cell}\n\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
