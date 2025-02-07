@@ -87,12 +87,13 @@ image: "images/image.png"
 }
 ```
 
-This post continues what I started last time, when I described an approach
+This post continues what I started [last time](/posts/2025-01-31-filter-snippet), 
+when I described an approach
 for dynamic filtering of data frame in `R`. The motivation and approach are 
 very similar. In short, we want to have a function that takes a list with
 instructions about how to aggregate a data frame. This is desirable in 
 non-interactive or automated workflows as in these cases we usually don't 
-know what the user might request. Creating an flexible interface, where
+know what the user might request. Creating a flexible interface, where
 one can send a JSON with aggregation instructions therefore can be very 
 helpful for various `{shiny}` and `{plumber}` tasks.
 
@@ -165,7 +166,7 @@ context would most likely be constructed programmatically.
 ### How does it work?
 
 Similar to our filtering function, we have two sections. First is input validation,
-again using `{checkmate}` because its awesome. We can make sure that the inputs 
+again using `{checkmate}` because it's awesome. We can make sure that the inputs 
 are of correct type, that they are named, and that the columns specified as grouping
 and aggregation variables are present in the dataset. Likewise, we ensure that the 
 requested aggregation functions are supported. 
@@ -258,7 +259,7 @@ and the NSE construct it would require (converting it to symbol, and `!!` it).
 In a `{shiny}` application, where we want to enable the user to select any column(s)
 to aggregate with some choices for aggregating function, it would require quite a bit
 of `if/else` logic to capture all the cases manually. Using this alternative, we simply
-harvest the user's selections from the input and construc the list of instructions before
+harvest the user's selections from the input and construct the list of instructions before
 plugging it into `.aggregate` to obtain our results.
 
 ### Summary
