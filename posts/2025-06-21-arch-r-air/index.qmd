@@ -27,4 +27,4 @@ Then, for no other particular reason than to see how it is done, I created a pac
 Because there is already a binary named `Air`: a Go library [Air](https://aur.archlinux.org/packages/air). In order not to overwite the user's system that 
 may have the Go binary, the name of the binary for the formatter is `r-air`.
 
-See more at the github discussion (here)[https://github.com/posit-dev/air/issues/347].
+See more at the github discussion with Posit [here](https://github.com/posit-dev/air/issues/347).
