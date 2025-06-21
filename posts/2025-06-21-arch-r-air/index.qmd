@@ -1,0 +1,30 @@
+---
+title: An Arch linux package for the Air R formatter
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2025-06-21'
+categories:
+  - R
+  - arch
+description: "Getting Air with the Arch linux package manager"
+execute:
+  eval: false
+image: "images/air.png"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+After the Python world got so many new tools, thanks to the people at [Astral](https://astral.sh/), I was super exited to see that the R world is trying to
+catch up. 
+
+In particular, Posit made a Rust backed R language server and formatter called [Air](https://posit-dev.github.io/air/).
+
+Then, for no other particular reason than to see how it is done, I created a package for AUR the Arch User Repository of contributed packages. You can find it here: [r-air-bin](https://aur.archlinux.org/packages/r-air-bin).
+
+## Why is it named r-air?
+
+Because there is already a binary named `Air`: a Go library [Air](https://aur.archlinux.org/packages/air). In order not to overwite the user's system that 
+may have the Go binary, the name of the binary for the formatter is `r-air`.
+
+See more at the github discussion (here)[https://github.com/posit-dev/air/issues/347].
