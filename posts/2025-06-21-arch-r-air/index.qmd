@@ -1,5 +1,5 @@
 ---
-title: An Arch linux package for the Air R formatter
+title: An Arch Linux package for the Air R formatter
 author: 
   - name: novica
     url: "https://discindo.org/authors/novica"
