@@ -1,0 +1,30 @@
+---
+title: Introducing bioinf-bloggers.com
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2025-09-05'
+categories:
+  - bioinf
+  - blog
+description: "A feed of the latest posts of Bioinformatics blogs around the world"
+execute:
+  eval: false
+image: "images/compbioinfo.jpg"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+(Image taken from [UiO](https://www.uio.no/english/studies/programmes/computational-science-master/programme-options/bioinformatics/why-choose/compbioinfo.jpg).)
+
+About a year ago I started following [r/bioinformatics](https://www.reddit.com/r/bioinformatics/). I work at a research institute where bioinformatics plays a big role, but not being from that field I wanted to familiarize my self with the topics, problems, and solutions.
+
+Then I bumped into this post: (Any Bioinformatics blogs out there?)[https://www.reddit.com/r/bioinformatics/comments/1go98kz/any_bioinformatics_blogs_out_there/]
+
+I started following the blogs in my RSS reader and that worked well. But then I thought it would be nice to have them all aggregated somehow. I remembered how convenient were the old [planet](https://en.wikipedia.org/wiki/Planet_(software)) sites that followed blogs on a similar topic.
+
+So I decided to build one: [bioinf-bloggers.com](https://bioinf-bloggers.com/).
+
+It is a static html rendered on `gh-pages`. I considered using Wordpress or something like that but it seemed like to much complications.
+
+The repository is on [GitHub](https://github.com/novica/bioinf-bloggers). And contributions in the blogs that it should aggregate are welcome. Just make a PR editing the `feeds.txt` file. Other suggestions are also welcome.
