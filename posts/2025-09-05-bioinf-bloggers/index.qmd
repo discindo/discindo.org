@@ -5,7 +5,7 @@ author:
     url: "https://discindo.org/authors/novica"
 date: '2025-09-05'
 categories:
-  - bioinf
+  - bioinformatics
   - blog
 description: "A feed of the latest posts of Bioinformatics blogs around the world"
 execute:
