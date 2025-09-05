@@ -19,7 +19,7 @@ image: "images/compbioinfo.jpg"
 
 About a year ago I started following [r/bioinformatics](https://www.reddit.com/r/bioinformatics/). I work at a research institute where bioinformatics plays a big role, but not being from that field I wanted to familiarize my self with the topics, problems, and solutions.
 
-Then I bumped into this post: (Any Bioinformatics blogs out there?)[https://www.reddit.com/r/bioinformatics/comments/1go98kz/any_bioinformatics_blogs_out_there/]
+Then I bumped into this post: [Any Bioinformatics blogs out there?](https://www.reddit.com/r/bioinformatics/comments/1go98kz/any_bioinformatics_blogs_out_there/)
 
 I started following the blogs in my RSS reader and that worked well. But then I thought it would be nice to have them all aggregated somehow. I remembered how convenient were the old [planet](https://en.wikipedia.org/wiki/Planet_(software)) sites that followed blogs on a similar topic.
 
