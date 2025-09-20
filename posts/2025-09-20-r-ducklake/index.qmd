@@ -1,5 +1,5 @@
 ---
-title: Jumping in the Duck Lake with nothing but R on
+title: Jumping in the Ducklake with nothing but R on
 author: 
   - name: novica
     url: "https://discindo.org/authors/novica"
