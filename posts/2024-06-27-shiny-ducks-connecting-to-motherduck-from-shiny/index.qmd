@@ -14,7 +14,7 @@ description: 'Few notes about getting up and running with Shiny and Mother duck'
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
-In a previous post I wrote about how to [connect to MotherDuck from R](posts/2024-06-21-joining-the-flock-from-r-working-with-data-on-mother-duck/). However, 
+In a previous post I wrote about how to [connect to MotherDuck from R](/posts/2024-06-21-joining-the-flock-from-r-working-with-data-on-mother-duck/). However, 
 the process described there, where you click in the browser to authenticate, 
 wouldn't really work with a Shiny app, or for that matter with any productionized
 setup. And R without Shiny is like pizza without pineapple. So let's see how to 
