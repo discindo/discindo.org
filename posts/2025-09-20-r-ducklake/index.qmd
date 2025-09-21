@@ -194,4 +194,4 @@ As we set out in the beginning we set up a Ducklake with R, wrote some data to i
 
 For local pipelines in particular,  I can see this approach been used with something like [{maestro}](https://github.com/whipson/maestro) to orchestrate a data pipeline. 
 
-The code above is available as a [gist] (https://gist.github.com/novica/ff55fc4d79c3007bb1acba40e74e9d25).
+The code above is available as a [gist](https://gist.github.com/novica/ff55fc4d79c3007bb1acba40e74e9d25).
