@@ -32,8 +32,11 @@ But why, you may ask? Well I think most data is not big data, but all data goes 
 Note: If you are thinking about following through this post this is a good time to do `install.packages('duckdb')` if there is not a [binary distribution](https://r.duckdb.org/#installation-from-cran) for your system. It takes a while to compile it.
 
 OK. This is what we will try to do next: 
+
 1. Set up a Ducklake; 
+
 2. Write some data to it; 
+
 3. Visualize relationships among tables.
 
 ## Setting up a Ducklake
