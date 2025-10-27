@@ -23,7 +23,7 @@ this was not from an anonymous recruiter viewing my profile. It was a post by
 [Russ Hyde](https://www.jumpingrivers.com/authors/russ-hyde/) who was looking for examples on
 how to organize the code in a Python Shiny app. He bumped into my repository on the 
 [topic](https://github.com/novica/pyshinywikidata). For the curious, there is also an accompanying
-[blog post](/post/packaging-a-python-shiny-app/) where I describe a simple approach 
+[blog post](/posts/pkg-env/2022-11-18-packaging-a-python-shiny-app/index.html) where I describe a simple approach 
 to package a Python Shiny app.
 
 It was a great reminder that I should look into my previous work, as I was 
