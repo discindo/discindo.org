@@ -1,0 +1,15 @@
+{
+  "hash": "29725acef5eb0e421e7a397116987b2a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: dplyr comes to duckdb\nauthor: \n  - name: novica\n    url: \"https://discindo.org/authors/novica\"\ndate: '2026-01-29'\ncategories:\n  - R \n  - duckdb\n  - dplyr\ndescription: \"Writing SQL with familiar verbs.\"\nexecute:\n  eval: false\nimage: \"images/duckplyr.png\"\n---\n\n[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)\n\nOf course, we have all used [duckplyr](https://duckplyr.tidyverse.org/) by now. But now we can use dplys syntax in duckdb thanks to an extension: [dplyr](https://duckdb.org/community_extensions/extensions/dplyr).\n\nI would guess that the inspiration for this comes from the 2023 [Google paper pipe syntax in SQL](https://research.google/pubs/sql-has-problems-we-can-fix-them-pipe-syntax-in-sql/). Since then at least, as far as I know, Databricks adopted it in 2025: [SQL Gets Easier: Announcing New Pipe Syntax](https://www.databricks.com/blog/sql-gets-easier-announcing-new-pipe-syntax). \n\n![](images/google-paper.png){fig-alt=\"Screenshot from the Google paper\"}\n\nAnd now piping is avaiable in duckdb. Fun! But wait...\n\n![](https://media1.tenor.com/m/8EtIRErgJk4AAAAd/ugly-duckling-crying-ducks.gif){fig-alt=\"Crying duck from tenor gifs\"}\n\nIf you want to try it out and like me install the latest duckdb (v1.4.4 (Andium) 6ddac802ff), the extension will not be avaiable:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nINSTALL dplyr FROM community;\nHTTP Error:\nFailed to download extension \"dplyr\" at URL \"http://community-extensions.duckdb.org/v1.4.4/windows_amd64/dplyr.duckdb_extension.gz\" (HTTP 404)\n```\n:::\n\n\nHopefull the maintainer will [fix this](https://github.com/mrchypark/libdplyr/issues/5) soon.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
