@@ -17,7 +17,7 @@ image: "images/aur.png"
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
-Whether it is a case of [Carcinisation](https://en.wikipedia.org/wiki/Carcinisation) or not, it seems we are now in the age where different tools for making the R language ecosystem better, faster, or more consistent are being built. In the R-world it definitely feels like an effort to catch up with what [Astral.sh](https://github.com/astral-sh) has done for python.
+Whether it is a case of [Carcinisation](https://en.wikipedia.org/wiki/Carcinisation) or not, it seems we are now in the age where different tools for making the R language ecosystem better, faster, or more consistent are being built, of course, in Rust. In the R-world it definitely feels like an effort to catch up with what [Astral.sh](https://github.com/astral-sh) has done for python.
 
 Interestingly, though, while Astral seem to be a doing a focused job on providing several tools for python, the R-world looks a bit fragmented with Posit doing some tools, and then some other companies and/or individual doing some other tools. And some have LLM help visible in the GitHub contributors list. 
 
