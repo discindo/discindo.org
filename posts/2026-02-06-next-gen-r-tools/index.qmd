@@ -1,0 +1,42 @@
+---
+title: Next-Gen R Tooling
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2026-02-06'
+categories:
+  - R 
+  - tools
+  - rust
+  - archlinux
+description: "Packages for Arch Linux."
+execute:
+  eval: false
+image: "images/aur.png"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+Whether it is a case of [Carcinisation](https://en.wikipedia.org/wiki/Carcinisation) or not, it seems we are now in the age where different tools for making the R language ecosystem better, faster, or more consistent are being built. In the R-world it definitely feels like an effort to catch up with what [Astral.sh](https://github.com/astral-sh) has done for python.
+
+Interestingly, though, while Astral seem to be a doing a focused job on providing several tools for python, the R-world looks a bit fragmented with Posit doing some tools, and then some other companies and/or individual doing some other tools. And some have LLM help visible in the GitHub contributors list. 
+
+Overall I am not sure how serious, or long-term all of this projects will be, but for now it seems fun to track them and see how they develop. And for that reason, and of course to make it easier to install these, I made Arch Linux [AUR](https://aur.archlinux.org/) packages for all tools that seem to fit in this bundle of next-gen R tooling.
+
+
+| Tool | Description | Source Package | Binary Package |
+| ---- | ------------| -------------- | -------------- |
+| [air](https://github.com/posit-dev/air)  | An R language server and formatter | [r-air](https://aur.archlinux.org/packages/r-air) | [r-air-bin](https://aur.archlinux.org/packages/r-air-bin) |
+| [arf](https://github.com/eitsupi/arf)  | A modern R console | [arf](https://aur.archlinux.org/packages/arf) | [arf-bin](https://aur.archlinux.org/packages/arf-bin) |
+| [ark](https://github.com/posit-dev/ark)  | An R kernel | [r-ark](https://aur.archlinux.org/packages/r-ark) | [r-ark-bin](https://aur.archlinux.org/packages/r-ark-bin) |
+| [jarl](https://github.com/etiennebacher/jarl) | Fast linter for the R language | [jarl](https://aur.archlinux.org/packages/jarl) | [jarl-bin](https://aur.archlinux.org/packages/jarl-bin) |
+| [rig](https://github.com/r-lib/rig)  | The R Installation Manager | [r-rig](https://aur.archlinux.org/packages/r-rig) | [r-rig-bin](https://aur.archlinux.org/packages/r-rig-bin) |
+| [rv](https://github.com/a2-ai/rv)   | A declarative R package manager | [rv](https://aur.archlinux.org/packages/rv) | [rv-bin](https://aur.archlinux.org/packages/rv-bin) |
+
+## Some notes on packaging
+
+Overall, providing an AUR package is a simple process. Using any existing `PKGBUILD` can serve as a template. However, I had to make changes to few `PKGBUILDS` because not all releases on GitHub follow the same directory structure. Also sometimes files were named differently then expected, for example having `LICENSE.md` instead of just `LICENSE` would promt changes to the packaging files.
+
+Additionally, it seems the authors of these tools were not always too mindful of other tools that exist with the same name. This is the case with `air` (a Go package), `ark` (the KDE archiving tool), and `rig` (A random identity generator) where binaries for other purposes alreary exist in the Linux distribution, so renaming those to `r-air`, `r-ark`, and `r-rig` was necessary to avoid conflicts.
+
+Anyway, hopefully people find these useful. And if you try them out please report any issues.
