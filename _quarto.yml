@@ -8,7 +8,7 @@ website:
   description: "Data science and data engineering solutions with R and Shiny in the cloud."
   google-analytics: 'GTM-T3SN4G9'
   cookie-consent: true
-  page-footer: "© 2019-2025 Discindo. This work is licensed under [**CC-BY-SA**](https://creativecommons.org/licenses/by-sa/4.0/deed.en). The content is aggregated on [**r-bloggers**](https://r-bloggers.com). Thanks for [**supporting**](https://ko-fi.com/discindo) us."
+  page-footer: "© 2019-2026 Discindo. This work is licensed under [**CC-BY-SA**](https://creativecommons.org/licenses/by-sa/4.0/deed.en). The content is aggregated on [**r-bloggers**](https://r-bloggers.com). Thanks for [**supporting**](https://ko-fi.com/discindo) us."
   navbar:
     logo: "images/icon-transparent.png"
     right:
