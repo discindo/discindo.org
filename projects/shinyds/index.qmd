@@ -1,0 +1,27 @@
+---
+date: "2026-06-09T00:00:00Z"
+external_link: ""
+links:
+  - icon: github
+    icon_pack: fab
+    name: GitHub
+    url: https://github.com/novica/shinyds/
+slides: 
+summary: shinyds - Designsystemet components for Shiny.
+tags:
+  - R
+  - shiny
+title: shinyds
+authors: ["novica"]
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+shinyds - Designsystemet components for Shiny.
+
+shinyds brings [Designsystemet](https://designsystemet.no/) --- the Norwegian
+government's shared design system --- to Shiny. It provides ds\_\* R functions
+that produce accessible, consistently styled UI components following Norwegian
+public sector design guidelines.
