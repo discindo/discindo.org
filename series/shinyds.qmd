@@ -1,0 +1,12 @@
+---
+title: "Series: shinyds"
+listing:
+  contents: ../posts/shinyds/*/*.qmd
+  sort: "date desc"
+  type: default
+  date-format: iso
+  categories: false
+fields: [date, title, reading-time, description]
+page-layout: full
+title-block-banner: true
+---

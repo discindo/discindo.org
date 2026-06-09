@@ -26,3 +26,8 @@ We do a lot of `{shiny}` work, and sometimes it happens that we run into a neat
 solution or learned something unexpected that we feel its worth sharing, 
 so we write a blog post about it. Among others, there are posts here on async 
 approaches for `{shiny}`, on multi-session `{shiny}`, and various UI tidbits.
+
+## [shinyds](series/shinyds.html)
+
+#### Various helpful posts on `shinyds`
+`shinyds` is the package that brings [Designsystemet](https://designsystemet.no) components to Shiny. These series of post explore the package and present examples on how to use it.

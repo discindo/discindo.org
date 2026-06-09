@@ -1,0 +1,36 @@
+---
+title: Introducing `shinyds`
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: "2026-06-09"
+categories:
+  - R
+  - shiny
+  - designsystemet
+description: "Designsystemet - Norwegian government's shared design system -  components for Shiny"
+execute:
+  eval: false
+image: "images/shinyds.svg"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+[Designsystemet](https://designsystemet.no/en/intro/about-the-design-system) is
+a shared toolkit of UI components and guidelines for developing digital services
+in Norway. It is free to use and it is a
+[registered](https://www.digitalpublicgoods.net/r/designsystemet) Digital Public
+Good.
+
+The usual way to use Designsystemet is through the provided packages that fit
+very well in the standard web development work - HTML/CSS/JS or with frameworks
+like React.
+
+With `shinyds` now you can use the same components with R and Shiny. The package
+is on CRAN so you can install it the usual way, or you can checkout the GitHub
+repository for the [code](https://github.com/novica/shinyds),
+[documentation](https://novica.github.io/shinyds/), and
+[examples](https://novica-faitful.share.connect.posit.cloud/).
+
+`shinyds` is done with help from an LLM, and there may be some untested edges.
+Comments, bug reports, usage examples, and other contributions are welcome.
