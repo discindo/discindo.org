@@ -10,7 +10,7 @@ slides:
 summary: An opinionated template for modern R projects. .
 tags:
 - R
-title: newscatcheR
+title: R project template
 authors: ['novica']
 url_code: ""
 url_pdf: ""
