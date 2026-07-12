@@ -13,7 +13,7 @@ categories:
 description: "An opinionated template for modern R projects."
 execute:
   eval: false
-image: ""
+image: "images/uvr.webp"
 ---
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
