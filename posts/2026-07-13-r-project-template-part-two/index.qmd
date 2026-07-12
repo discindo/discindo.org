@@ -1,0 +1,56 @@
+---
+title: R project template, part two
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2026-07-12'
+categories:
+  - R 
+  - template
+  - project
+  - module
+  - tools
+description: "An opinionated template for modern R projects."
+execute:
+  eval: false
+image: 
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+In recent months the R world has exploded with many new tools (mostly written in 
+`Rust`) that try to solve one or another problem that exists in the ecosystem. I 
+am tracking all of these at a dedicated page at [r-devs.com](https://r-devs.com). 
+Just a few days ago one of these tools - [uvr](https://github.com/nbafrank/uvr) 
+- was released with support for R installation using the portable, relocatable 
+builds published by [rstudio/r-builds](https://github.com/rstudio/r-builds). This 
+is a major change that brings the R workflow very close to what is possible in 
+python and delivering on uvr's promise to "bring uv-style project management to R".
+
+This prompted some rework on the R project template that aims to replicate as close
+as possible a python-like workflow for R. I introduced this 
+[template](/posts/2026-02-24-r-project-template/) few months ago with the notes
+that it works though it could be better.
+
+Now I think a step towards making it better has been achieved by what `uvr` introduced.
+Additionally, another tool - [rd2qmd](https://github.com/eitsupi/rd2qmd) - comes
+in handy to generate the documentation and pass it on to Quarto for a more streamlined
+site generation and deployment.
+
+The `rd2qmd` path has also prompted some ideas to improve `box` internals about 
+how it handles documentation, and maybe it will be beneficial to propose these 
+changes to the `box` upstream.
+
+The landscape keeps changing though. Posit just recently released another tool 
+- [ir](https://github.com/r-lib/ir) - that 
+[according to some](https://bsky.app/profile/andrewholz.bsky.social/post/3mq5xhnd3u22j) 
+is an 'R version of uv'. Depending on how that develops in the future, I may decide
+to update the template to use it. And this is just noting potentially the most
+influential tool that was just released, [other tools](https://r-devs.com) 
+are out there too.
+
+But the template is ready to be used. 
+Code is here: [R project template](https://github.com/novica/r-project-template). 
+Try it out.
+
+
