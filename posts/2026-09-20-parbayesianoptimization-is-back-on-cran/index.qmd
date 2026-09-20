@@ -1,0 +1,28 @@
+---
+title: ParBayesianOptimization is back on CRAN
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2026-09-20'
+categories:
+  - R 
+  - package
+  - CRAN
+description: "A popular package for Parallelizable Bayesian Optimization is avaiable again on CRAN."
+execute:
+  eval: false
+image: "images/hex.webp"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+In December last year someone posted on Reddit about [transferring ownership of an R package](https://www.reddit.com/r/Rlanguage/comments/1pe1lm8/transferring_ownership_of_open_source_packages/). I offered to help the issue they were encountering and made a PR, but the author disappeared, deleting the posts and comments altogether. This suggests, at least to me, that for the time being the original author had no time and intention to maintain the package.
+
+The package in question is [ParBayesianOptimization](https://github.com/AnotherSamWilson/ParBayesianOptimization) which according to it's GitHub page was useful to many (358K downloads, 121 stars).
+
+Because I had the fix to the issues causing CRAN deletion ready, and had some time on my hands, I resubmitted the package to CRAN from my fork, updating some infrastructure related things: github actions, jarl/air configuration, and similar. Feature-wise the package at version 1.3.0 is the same as the latest version available on CRAN up until December last year.
+
+My intention is to keep it maintained as is, and make necessary changes if CRAN requires it. People using the package can make issues at its [new home on my GitHub](https://github.com/novica/ParBayesianOptimization). However, I know almost nothing of the subject matter that the package deals with, so any new features will depend on contributors who understand it and are willing to make the contributions.
+
+If the original author resurfaces, I am happy to hand it over for maintenance. 
+
