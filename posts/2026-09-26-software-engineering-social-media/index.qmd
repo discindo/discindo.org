@@ -34,4 +34,5 @@ Again this comes back as a boomerang to the industry that was so eager to design
 Some users maybe better than this, of course. Same as some users are not on social media and they are able to ignore it, or curate it better. But for many, if not the majority it will be, if not already, a crap experience (even without mentioning the ads which are to becoming a feature of LLMs.)
 
 ![](images/myspace.png){fig-alt="Myspace logo, source Wikipedia"}
+
 And some users may enjoy building the random thing. Github well become the Myspace of the LLM world with various scattered projects that people used once or tried to make it work with the extra $20 spent on a LLM subscription instead of a few beers or whatever. Will many of those be things that you would like to return to or use in two years time? I doubt it. But that what's social media is about, right? And endless stream of transient experiences.
