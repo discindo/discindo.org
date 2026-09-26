@@ -17,22 +17,22 @@ image: "images/myspace.png"
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
-Six months ago I wrote a post arguing that [software engineering enters its accounting era](/posts/2026-03-16-software-engineering-accounting/). I still think this a good argument on the point about building software and the potential community around it. 
+Six months ago I wrote a post arguing that [software engineering enters its accounting era](/posts/2026-03-16-software-engineering-accounting/). I still think this is a good argument on the point about building software and the potential community around it. 
 
-Today I want to expand on the consequences of this new way of working looking at two things: decision fatigue and algorithmic development.
+Today I want to expand on the consequences of this new way of working, looking at two things: decision fatigue and algorithmic development.
 
-The term **decision fatigue** has popped up enough times with regards to LLMs and AI. It is about the cognitive overload of reviewing agents' work. Should I accept this commit or not? Is this a bug worth chasing or not? And so on.
+The term **"decision fatigue"** has popped up enough times regarding LLMs and AI. It is about the cognitive overload of reviewing agents' work. Should I accept this commit or not? Is this a bug worth chasing or not? And so on.
 
-I think it is funny the industry and/or community that burdened the wider society with platforms that deliver decision fatigue, now faces the same acute problem. By this I mean the way social media is designed to work: to offer an endless stream of advise that aims to micromanage a persons life. A user of today's social media will have to deal with the daily information feed that the algorithm of the platform will serve and then will have to decide on multiple things depending on interest and context and then do it again tomorrow and the next day. 
+I think it is funny the industry and/or community that burdened the wider society with platforms that deliver decision fatigue now faces the same acute problem. By this I mean the way social media is designed to work: to offer an endless stream of advice that aims to micromanage a person's life. A user of today's social media will have to deal with the daily information feed that the algorithm of the platform will serve and then will have to decide on multiple things depending on interest and context and then do it again tomorrow and the next day. 
 
-I am making these up as I type but won't be too surprised if they are real titles somewhere online: five reasons why eggs are best for breakfast, three reasons to avoid eggs for breakfast, six lessons for raising smart kids, 10 things you should never do if you want your children to be successful, three exercises you should never skip, seven exercises that do more harm then good. If that sounds too familiar maybe it is very close to: should we chase this bug or just commit as is?
+I am making these up as I type but won't be too surprised if they are real titles somewhere online: five reasons why eggs are best for breakfast, three reasons to avoid eggs for breakfast, six lessons for raising smart kids, 10 things you should never do if you want your children to be successful, three exercises you should never skip, and seven exercises that do more harm than good. If that sounds too familiar maybe it is very close to should we chase this bug or just commit as is?
 
 Then **algorithmic development** as the sibling of the above. Just as the next thing you see on social media depends on what you clicked before, the next suggested LLM prompt is basically a continuation of the last output it provides. It is what the LLM is designed to offer as a next step. That may not be the next step relevant to the thing you are working on or even not be something you consider important, but pressing enter is just too easy and off it goes.
 
-Again this comes back as a boomerang to the industry that was so eager to design what the general public consumes online in the same manner.
+Again this comes back as a boomerang to the industry that was so eager to design what the public consumes online in the same manner.
 
-Some users maybe better than this, of course. Same as some users are not on social media and they are able to ignore it, or curate it better. But for many, if not the majority it will be, if not already, a crap experience (even without mentioning the ads which are to becoming a feature of LLMs.)
+Some users may be better than this, of course. Same as some users are not on social media, and they can ignore it, or curate it better. But for many, if not the majority, it will be, if not already, a crap experience (even without mentioning the ads, which are to become a feature of LLMs.)
 
-![](images/myspace.png){fig-alt="Myspace logo, source Wikipedia"}
+![](images/myspace.png){fig-alt="Myspace logo, source: Wikipedia"}
 
-And some users may enjoy building the random thing. Github well become the Myspace of the LLM world with various scattered projects that people used once or tried to make it work with the extra $20 spent on a LLM subscription instead of a few beers or whatever. Will many of those be things that you would like to return to or use in two years time? I doubt it. But that what's social media is about, right? And endless stream of transient experiences.
+And some users may enjoy building the random thing. GitHub will become the Myspace of the LLM world with various scattered projects that people used once or tried to make it work with the extra $20 spent on an LLM subscription instead of a few beers or whatever. Will many of those be things that you would like to return to or use in two years'  time? I doubt it. But that's what social media is about, right? An endless stream of transient experiences.
