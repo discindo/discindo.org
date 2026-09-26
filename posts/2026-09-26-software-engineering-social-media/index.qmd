@@ -8,7 +8,7 @@ categories:
   - software
   - llm
   - agents
-  - accounting
+  - social media
 description: "On decision fatique and algorithmic development"
 execute:
   eval: false
@@ -17,7 +17,7 @@ image: "images/myspace.png"
 
 [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
 
-Six months ago I wrote a post arguing that [software engineering enters its accounting era](/posts/software-engineering-accounting). I still think this a good argument on the point about building software and the potential community around it. 
+Six months ago I wrote a post arguing that [software engineering enters its accounting era](/posts/2026-03-16-software-engineering-accounting/). I still think this a good argument on the point about building software and the potential community around it. 
 
 Today I want to expand on the consequences of this new way of working looking at two things: decision fatigue and algorithmic development.
 
