@@ -27,7 +27,7 @@ I think it is funny the industry and/or community that burdened the wider societ
 
 I am making these up as I type but won't be too surprised if they are real titles somewhere online: five reasons why eggs are best for breakfast, three reasons to avoid eggs for breakfast, six lessons for raising smart kids, 10 things you should never do if you want your children to be successful, three exercises you should never skip, and seven exercises that do more harm than good. If that sounds too familiar maybe it is very close to should we chase this bug or just commit as is?
 
-Then **algorithmic development** as the sibling of the above. Just as the next thing you see on social media depends on what you clicked before, the next suggested LLM prompt is basically a continuation of the last output it provides. It is what the LLM is designed to offer as a next step. That may not be the next step relevant to the thing you are working on or even not be something you consider important, but pressing enter is just too easy and off it goes.
+Then **algorithmic development** is the sibling of the above. Just as the next thing you see on social media depends on what you clicked before, the next suggested LLM prompt is basically a continuation of the last output it provides. It is what the LLM is designed to offer as a next step. That may not be the next step relevant to the thing you are working on or even not be something you consider important, but pressing enter is just too easy and off it goes.
 
 Again this comes back as a boomerang to the industry that was so eager to design what the public consumes online in the same manner.
 
