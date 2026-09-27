@@ -9,7 +9,7 @@ categories:
   - llm
   - agents
   - social media
-description: "On decision fatique and algorithmic development"
+description: "On decision fatigue and algorithmic development"
 execute:
   eval: false
 image: "images/myspace.png"
