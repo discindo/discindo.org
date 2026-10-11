@@ -1,0 +1,20 @@
+---
+date: "2026-10-11T18:40:00Z"
+external_link: ""
+links:
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/discindo/ggindex/
+slides: 
+summary: ggindex - numbered points that explain themselves
+tags:
+- R
+title: ggindex
+authors: ['teo', 'novica']
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+ {ggindex}: A ggplot2 extension for creating numbered points that explain themselves
