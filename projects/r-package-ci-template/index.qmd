@@ -1,0 +1,20 @@
+---
+date: "2026-10-15T00:00:00Z"
+external_link: ""
+links:
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/novica/r-package-ci-template
+slides: 
+summary: CI, release and citation setup for R packages on GitHub.
+tags:
+- R
+title: A CI/CD template for R packages
+authors: ['novica']
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+A R package CI/CD template that features conventional commits, release-please, jarl and air, a CITATION.cff setup, and many other things.
