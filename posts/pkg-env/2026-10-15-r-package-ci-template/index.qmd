@@ -1,0 +1,35 @@
+---
+title: A CI/CD template for R packages
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2026-10-15'
+categories:
+  - R
+  - CI/CD
+  - GitHub Actions
+description: 'How few R pacakges contributed to a GitHub repository that gives a CI/CD skeleton for an R package'
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+I am not a productive R package author, at least not for public / CRAN packages. For a very long time the only package I had on CRAN was [newscatcheR](https://github.com/discindo/newscatcheR) - a package that really required almost zero maintenance. 
+
+However, as things happen, I had an itch, and created [shinyds](https://github.com/novica/shinyds). This is a [package](/posts/shinyds/2026-06-09-introducing-shinyds/) that is potentially mostly useful to users in Norway, where I currently work, though, given that the design system is a [Digital Public Good](https://www.digitalpublicgoods.net/r/designsystemet), people elsewhere may find it useful too.
+
+At more or less the same time when I started working on shinyds, I tried to help someone with their package and [fast forward](/posts/2026-09-20-parbayesianoptimization-is-back-on-cran/) to today I am maintaining [ParBayesianOptimization](https://github.com/novica/ParBayesianOptimization).
+
+I suddenly had two packages to maintain. I had some GitHub actions workflows on shinyds, that I wanted to use on ParBayesianOptimization. They were useful and carried what I've learned about CI/CD over the years and how I want it to work. So I started copy/pasting, but then I would makes some changes in the workflow in one package and had to go back to make the same in the other, and so on. It was becoming a chore. 
+
+Then I had this idea to revisit an old [ggplot2 extension](https://discindo.org/posts/2026-10-11-ggindex-ggplot2-extension/) demo, and suddenly had a third package - [ggindex](https://github.com/discindo/ggindex).
+
+At that point I decided that maybe it is a good idea to have the workflows in a separate repository to maintain and copy from it to all the other places where I now use it, nd potentially to new places as well.
+
+And it is on GitHub - [R package CI template](https://github.com/novica/r-package-ci-template). Creating a repository from the template carries the workflows and the user can just start adding R code. Additionally, if a package already exists, a user can run `tools/apply.sh` and get is set up.
+
+The workflows are slightly different from what `usethis` provides. In particular I like to use `release-please` and have the `NEWS.md` written automatically by parsing the `CHANGELOG.md`. [Conventional commits](https://www.conventionalcommits.org/) are expected and the Pull Request title is also checked for that. 
+
+The template also has an issue template, a PR template, a `CITATION` file, and `jarl` and `air` configuration, and some other bells and whistles. And it is another thing to maintain.
+
+Sharing in hope it will be useful to another person with an AI agent. 
+
