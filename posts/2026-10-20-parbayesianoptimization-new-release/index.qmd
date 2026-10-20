@@ -1,0 +1,129 @@
+---
+title: ParBayesianOptimization v1.4.2
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2026-10-20'
+categories:
+  - R 
+  - package
+  - CRAN
+description: "ParBayesianOptimization 1.4.2 cuts the install footprint from 84 to 27
+    packages, stops asking questions in the middle of unattended runs, and
+    catches misspelled arguments before your scoring function runs."
+execute:
+  eval: false
+image: "images/hex.webp"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+# ParBayesianOptimization 1.4.2
+
+After the back to CRAN release of 
+[ParBayesianOptimization](/posts/2026-09-20-parbayesianoptimization-is-back-on-cran) 
+v1.4.2 is the first release that reaches users with some new features.
+
+
+ParBayesianOptimization is a package that  tunes model hyperparameters with Bayesian
+optimization: it fits a Gaussian process to the scores you have so far and
+uses it to pick the next parameters to try, optionally running your scoring
+function in parallel.
+
+This release focuses on a lighter install and on making long, unattended runs
+behave predictably. You can see a full list of changes in the
+release notes for [1.4.2](https://github.com/novica/ParBayesianOptimization/releases/tag/v1.4.2).
+
+## A much lighter install
+
+Installing 1.3.0 pulled in 84 packages, including stringi and most of the
+tidyverse, all to arrange two scatter plots. ggpubr is now replaced by
+patchwork and crayon by cli, which brings the count down to 27.
+
+This matters most where ParBayesianOptimization usually runs: on servers,
+in Docker images and on HPC nodes, where every extra compiled dependency is
+something to build, cache and keep working.
+
+The new dependencies do require R 4.1 or later, as ggplot2 and lhs already
+do.
+
+`plot()` draws the same two panels as before, with the score of each run on
+top and the utility the Gaussian process expected from it below. It now
+returns a patchwork object, and any arguments you pass go to
+`patchwork::plot_layout()`, where they override the defaults. For example,
+to put the panels side by side:
+
+```r
+plot(optObj, ncol = 2)
+```
+
+If you saved or modified the object returned by `plot()` in 1.3.0, which
+was a ggpubr `ggarrange` object, check that code: patchwork objects work
+with `ggsave()` and `&`/`+` theming, but `ggarrange()` arguments such as
+`common.legend` are no longer accepted.
+
+## No more prompts in unattended runs
+
+`addIterations()` lets you continue an optimization, optionally with new
+bounds. If you tightened the bounds so that some earlier results fell
+outside them, 1.3.0 stopped and asked `Continue? [y/n]` with `readline()`.
+That's fine at the console, but in a batch job or on a cluster nobody is
+there to answer.
+
+Now it warns instead, and leaves those results out of the Gaussian
+process fit:
+
+```r
+optObj <- addIterations(optObj, bounds = list(x = c(2, 10)), iters.n = 5)
+#> Warning message:
+#> Bounds have been tightened. 1 parameter set in scoreSummary is outside
+#> the new bounds and will be ignored this round.
+```
+
+Two related fixes make this reliable: the first Gaussian process fit in
+`addIterations()` now also leaves out-of-bounds rows out, and the check for
+"enough samples to fit" counts only error-free results within the bounds.
+
+## Catching mistakes before `FUN` runs
+
+Your scoring function is usually the expensive part, often a full
+cross-validated model fit. Mistakes that only surface after it has run cost
+real time.
+
+Arguments in `...` are passed to `DiceKriging::km()`, which fits the
+Gaussian process. In 1.3.0 a typo there was only caught when the first
+Gaussian process was fitted, after the initial scoring runs had finished.
+Now `bayesOpt()`, `addIterations()` and `updateGP()` check them up front:
+
+```r
+bayesOpt(FUN, bounds, initPoints = 4, nugget.extimate = TRUE)
+#> Error in checkKmArgs(...):
+#>   Arguments in ... are passed to DiceKriging::km(), which does not
+#>   accept: nugget.extimate. Check for misspelled arguments.
+```
+
+Unique prefixes of `km()` arguments are still accepted, just as R accepts
+them.
+
+The acquisition function is also validated more strictly. `acq` must be a
+single string, and its options now appear in the `bayesOpt()` signature, so
+your editor can show them:
+
+```r
+bayesOpt(..., acq = c("ucb", "ei", "eips", "poi"))
+```
+
+`"ucb"` stays the default.
+
+## What's next
+
+I plan to make another release before New Year, but hopefully I can get some
+feedback before. The development version already has some changes for using 
+`cli` throughout the package. 
+
+The remaining heavy dependency is ggplot2 itself, again only for `plot()`.
+I am thinking that a package like this should not pull so many depedencies 
+just to draw one plot. [Issue #48](https://github.com/novica/ParBayesianOptimization/issues/48)
+proposes drawing the plot with tinyplot instead, which would bring the
+count down to 11 packages. It changes what `plot()` returns, so feedback is
+welcome there before it goes into a release.
