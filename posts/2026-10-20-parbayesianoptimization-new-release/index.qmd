@@ -25,7 +25,7 @@ After the back to CRAN release of
 v1.4.2 is the first release that reaches users with some new features.
 
 
-ParBayesianOptimization is a package that  tunes model hyperparameters with Bayesian
+ParBayesianOptimization is a package that tunes model hyperparameters with Bayesian
 optimization: it fits a Gaussian process to the scores you have so far and
 uses it to pick the next parameters to try, optionally running your scoring
 function in parallel.

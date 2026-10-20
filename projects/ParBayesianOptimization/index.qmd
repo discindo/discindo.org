@@ -1,0 +1,26 @@
+---
+date: "2026-09-20T00:00:00Z"
+external_link: ""
+links:
+  - icon: github
+    icon_pack: fab
+    name: GitHub
+    url: https://github.com/novica/ParBayesianOptimization
+slides: 
+summary: Tune model hyperparameters with Bayesian optimization
+tags:
+  - R
+  - machine learning
+  - bayes
+title: ParBayesianOptimization
+authors: ["novica"]
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+ParBayesianOptimization is a package that tunes model hyperparameters with Bayesian
+optimization: it fits a Gaussian process to the scores you have so far and
+uses it to pick the next parameters to try, optionally running your scoring
+function in parallel.
