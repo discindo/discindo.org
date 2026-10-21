@@ -1,0 +1,12 @@
+---
+title: "Series: inlaops"
+listing:
+  contents: ../posts/inlaops/*/*.qmd
+  sort: "date desc"
+  type: default
+  date-format: iso
+  categories: false
+fields: [date, title, reading-time, description]
+page-layout: full
+title-block-banner: true
+---

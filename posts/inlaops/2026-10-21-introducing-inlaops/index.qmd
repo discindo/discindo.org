@@ -1,0 +1,39 @@
+---
+title: Introducing inlaops
+author: 
+  - name: novica
+    url: "https://discindo.org/authors/novica"
+date: '2026-10-21'
+categories:
+  - R 
+  - package
+  - CRAN
+  - inla
+  - modelling
+description: "Serve inlabru models as versioned REST APIs that answer with posterior uncertainty, not just a point estimate."
+execute:
+  eval: false
+image: "images/logo.svg"
+---
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J8133RYV)
+
+# inlaops - an introduction
+
+This is a project that I wanted to have working for a while. 
+
+Working in the life sciences sector I learned that [INLA](https://www.r-inla.org/) is a very popular package for modeling.
+
+However, making it fit in the wider R ecosystem is a challenge. There are a few gaps, but in particular I was looking for a way to have a deployed model.
+
+I thought that using it with `vetiver` should be the way to go, and so `inlaops` came into being. My specific case involves hosting on Posit Connect, but an API can be published in many ways, and this makes it suitable for different environments.
+
+With `inlaops` one can follow the usual steps of fitting the model, and then making the model available on an API.
+
+The Posit Connect use case is [documented](https://novica.github.io/inlaops/articles/connect.html) on the package's site.
+
+`inlaops` was made possible first by being able to [install INLA](https://gist.github.com/novica/447c8f5c0a54386abdc113e618e58d66) from a local package manager, and then from `inlabru` having introduced [Tidy Postprocessing](https://inlabru-org.github.io/inlabru/reference/index.html#tidy-postprocessing). 
+
+I expect there are some rough edges in the package. It works on my demo, but I would be interested in hearing feedback from users. 
+
+The initial release is on its way to CRAN.
